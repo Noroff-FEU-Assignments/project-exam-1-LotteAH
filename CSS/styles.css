@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    padding: 0px;
+}
+html, body {
+    font-family: "OpenSans", Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+}
+
+.top-header {
+    height: 20%;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.logo {
+    width: 200px; 
+    height: auto; 
+}
+
+.bottom-header {
+    background-color: #A8D48C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    position: relative;
+}
+
+nav,
+#menu-checkbox {
+    display: none;
+}
+
+#menu-checkbox:checked ~ nav {
+    display: block;
+    position: absolute;
+    top: calc(100%);
+    left: 0;
+    width: 100%;
+}
+
+.hamburger {
+    width: 40px;
+    height: auto;
+}
+
+nav {
+    min-height: 100px;
+    font-size: 2rem;
+    background-color: #669966;
+    padding-bottom: 70px;
+}
+
+nav a {
+    display: block;
+    color: white;
+    padding-top: 40px;
+    text-decoration: none;
+    text-align: center;
+}
+
+@media (min-width: 900px) {
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: static;
+        text-align: center;
+        height: 60px;
+        min-height: unset;
+        font-size: 1.5rem;
+        background-color: transparent;
+        padding-bottom: 0;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    nav a {
+        display: inline-block;
+        padding: 20px 60px;
+        color: white;
+        text-decoration: none;
+        background-color: transparent;
+    }
+}
