@@ -25,7 +25,7 @@ html, body {
 }
 
 .logo {
-    width: 200px; 
+    width: 250px; 
     height: auto; 
 }
 
@@ -70,6 +70,11 @@ nav a {
     text-decoration: none;
     text-align: center;
 }
+
+
+
+
+
 
 @media (min-width: 900px) {
     nav {
