@@ -14,7 +14,9 @@ html, body {
     font-family: "OpenSans", Verdana, Geneva, Tahoma, sans-serif;
     width: 100%;
 }
-
+main{
+    min-height: 500px;
+}
 .top-header {
     height: 20%;
     padding-top: 30px;
@@ -41,6 +43,10 @@ html, body {
 nav,
 #menu-checkbox {
     display: none;
+}
+
+.current-page {
+font-weight: 600;
 }
 
 #menu-checkbox:checked ~ nav {
@@ -72,20 +78,16 @@ nav a {
 }
 
 nav :hover {
-    font-weight: 600;
     text-decoration: underline;
     text-underline-offset: 5px;
 }
 
 
-main {
-    height: 200px
-}
 
 footer {
     background-color: #333333;
     min-height: 100px;
-    position: fixed;
+    position: relative;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -151,6 +153,7 @@ footer {
         min-height: 100px;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        position: absolute;
      }
 
      .footer-logo {
