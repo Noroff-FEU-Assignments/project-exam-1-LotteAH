@@ -6,7 +6,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-
 a {
     padding: 0px;
 }
@@ -14,9 +13,19 @@ html, body {
     font-family: "OpenSans", Verdana, Geneva, Tahoma, sans-serif;
     width: 100%;
 }
+
 main{
-    min-height: 500px;
+    margin:20px;
 }
+
+.x-container {
+    width: 100%;
+    max-width: 115ch;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1;
+}
+
 .top-header {
     height: 20%;
     padding-top: 30px;
@@ -120,6 +129,84 @@ footer {
     padding: 15px;
 }
 
+h1 {
+    font-family:'Londrina Solid';
+    font-size: 3em;
+    color: #346734;
+    text-transform: uppercase;
+
+}
+
+h2 {
+    font-family:'Open Sans';
+    font-size: 2em;
+    color: #346734;
+    text-transform: uppercase;
+
+}
+
+p {
+    font-family:'Open Sans';
+    font-size: 1em;
+    color: #333333;
+    
+}
+
+.carousel{
+    display: flex;
+    justify-content: centre;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+}
+.carousel-img {
+    height: 350px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.arrow {
+    width: 20px; /* Adjust width as needed */
+    height: 20px; /* Adjust height as needed */
+  }
+
+  .arrow-left img,
+  .arrow-right img {
+    width: 40px; /* Adjust width as needed */
+  }
+
+  .carousel-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px; /* Adjust margin as needed */
+  }
+
+.carousel-text {
+    height: 350px;
+    width: 350px;
+    padding: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color:rgba(168, 212, 140, 0.25);
+}
+
+.about-image {
+    display:flex;
+    width: 400px;
+    border-radius: 50%;
+    border: 1em solid #A8D48C;
+    margin: 40px;
+    align-items: center;
+}
+
+.about-text {
+    text-align: center;
+    padding:20px;
+}
+
 
 
 
@@ -153,7 +240,7 @@ footer {
         min-height: 100px;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        position: absolute;
+
      }
 
      .footer-logo {
