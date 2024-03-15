@@ -162,7 +162,7 @@ p {
     align-items: center;
 }
 .carousel-img {
-    height: 350px;
+    height: 300px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -185,8 +185,8 @@ p {
   }
 
 .carousel-text {
-    height: 350px;
-    width: 350px;
+    height: 300px;
+    width: 300px;
     padding: 20px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -195,11 +195,11 @@ p {
 
 .about-image {
     display:flex;
-    width: 400px;
+    width: 350px;
     border-radius: 50%;
     border: 1em solid #A8D48C;
-    margin: 40px;
     align-items: center;
+    margin-bottom: 40px;
 }
 
 .about-text {
