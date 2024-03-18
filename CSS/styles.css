@@ -20,10 +20,10 @@ main{
 
 .x-container {
     width: 100%;
-    max-width: 115ch;
-    margin: 0 auto;
+    max-width: 900px; /* Set a maximum width for the content */
+    margin: 0 auto; /* Center the container horizontally */
     padding: 20px;
-    flex: 1;
+    box-sizing: border-box;
 }
 
 .top-header {
@@ -150,6 +150,7 @@ p {
     font-family:'Open Sans';
     font-size: 1em;
     color: #333333;
+    padding-bottom: 20px;
     
 }
 
@@ -158,15 +159,15 @@ p {
 }
 
 .leaves {
-    display: flex; /* Make it a flex container */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    max-width: 10px; /* Set maximum width for images */
-    padding: 20px 40px; /* Add padding */
+    display: flex;  
+    justify-content: center; 
+    align-items: center; 
+    max-width: 10px; 
+    padding: 20px 40px; 
   }
 
   .leaves img {
-    max-width: 100%; /* Ensure images don't exceed the container width */
+    max-width: 100%; 
   }
 
 .carousel{
@@ -185,13 +186,13 @@ p {
 }
 
 .arrow {
-    width: 20px; /* Adjust width as needed */
-    height: 20px; /* Adjust height as needed */
+    width: 20px; 
+    height: 20px; 
   }
 
   .arrow-left img,
   .arrow-right img {
-    width: 40px; /* Adjust width as needed */
+    width: 40px; 
   }
 
   .carousel-content {
@@ -210,39 +211,99 @@ p {
     background-color:rgba(168, 212, 140, 0.25);
 }
 
+.green_text_box_bottom {
+    max-width: 100%;
+    height: auto;
+    padding: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: rgba(168, 212, 140, 0.25);
+}
+
+
+.green_text-box-top {
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: rgba(168, 212, 140, 0.25);
+    max-width: 100%; /* Ensures the image scales down to fit its container */
+    height: auto; /* Maintains the aspect ratio of the image */
+}
+
 .about-image {
-    display:flex;
-    width: 350px;
     border-radius: 50%;
-    border: 1em solid #A8D48C;
-    align-items: center;
-    margin-bottom: 40px;
+    border: 0.5em solid #A8D48C;
+    margin: 40px;
+    max-width: 100%; 
+    max-height: 300px; 
+    width: auto;
+    height: auto;
 }
 
 .about-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
     text-align: center;
-    padding:20px;
+    align-content: center;
+}
+
+.centered-text {
+    text-align: center;
+    padding: 0 40px;
+}
+
+.about_img_2 {
+    display: flex;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    max-width: 100%; 
+    height: auto; 
 }
 
 form {
+    font-family: 'Open Sans', sans-serif;
     margin-top: 20px;
   }
   
 label {
     display: block;
   }
-  
+
+
+
 input[type="text"],
 input[type="email"],
 textarea {
-    width: 100%;
-    margin-bottom: 10px;
+    width: 100%; /* Make inputs and textareas span the full width */
+    margin-bottom: 10px; /* Add margin bottom for spacing */
+    border: 2px solid #A8D48C; /* Light green borders */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Padding inside the boxes */
   }
   
 .error {
     color: red;
     font-size: 14px;
   }
+
+  button[type="submit"] {
+    background-color: #669966; 
+    color: white;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 30px; 
+    cursor: pointer;
+}
+
+/* Optional: Hover effect */
+button[type="submit"]:hover {
+    background-color: darkgreen; /* Darker green on hover */
+}
 
 
 @media (min-width: 900px) {

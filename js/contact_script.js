@@ -21,26 +21,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (name.length < 5) {
       nameError.textContent = 'Name must be at least 5 characters long.';
-      return; // Stop form submission
+      return; 
     }
 
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
       emailError.textContent = 'Invalid email address.';
-      return; // Stop form submission
+      return; 
     }
 
     if (subject.length < 15) {
       subjectError.textContent = 'Subject must be at least 15 characters long.';
-      return; // Stop form submission
+      return; 
     }
 
     if (message.length < 25) {
       messageError.textContent = 'Message must be at least 25 characters long.';
-      return; // Stop form submission
+      return; 
     }
 
-    // If all validations pass, submit the form
+    
     form.submit();
   });
 });
