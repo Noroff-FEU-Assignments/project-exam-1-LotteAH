@@ -37,7 +37,33 @@
       </section>
     </header>
 
-    <main></main>
+    <main>
+      <h1>Contact us:</h1>
+      <form id="contactForm">
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" />
+          <div id="nameError" class="error"></div>
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" />
+          <div id="emailError" class="error"></div>
+        </div>
+        <div>
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" />
+          <div id="subjectError" class="error"></div>
+        </div>
+        <div>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message"></textarea>
+          <div id="messageError" class="error"></div>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+      <script src="script.js"></script>
+    </main>
 
     <footer class="footer">
       <section class="footer-logo">
