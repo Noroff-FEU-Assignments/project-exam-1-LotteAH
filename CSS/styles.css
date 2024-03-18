@@ -159,16 +159,18 @@ p {
 }
 
 .leaves {
-    display: flex;  
-    justify-content: center; 
-    align-items: center; 
-    max-width: 10px; 
-    padding: 20px 40px; 
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0; /* Adjust padding as needed */
+}
 
-  .leaves img {
-    max-width: 100%; 
-  }
+.leaves img {
+    max-width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure the image behaves as a block element */
+    margin: 0 auto; /* Center the image horizontally */
+}
 
 .carousel{
     display: flex;
@@ -264,24 +266,42 @@ p {
 
 form {
     font-family: 'Open Sans', sans-serif;
-    margin-top: 20px;
   }
   
-label {
+  label {
     display: block;
-  }
+    margin-bottom: 3px; 
+}
 
 
 
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%; /* Make inputs and textareas span the full width */
-    margin-bottom: 10px; /* Add margin bottom for spacing */
-    border: 2px solid #A8D48C; /* Light green borders */
-    border-radius: 10px; /* Rounded corners */
-    padding: 10px; /* Padding inside the boxes */
-  }
+input[type="text"][name="name"] {
+    width: 40%; 
+    margin-bottom: 10px; 
+    border: 2px solid #A8D48C; 
+    border-radius: 10px; 
+    padding: 10px; 
+    margin-top: 3px; 
+}
+
+input[type="email"][name="email"] {
+    width: 60%; 
+    margin-bottom: 10px; 
+    border: 2px solid #A8D48C; 
+    border-radius: 10px; 
+    padding: 10px; 
+    margin-top: 3px; 
+}
+
+input[type="text"][name="subject"],
+textarea[name="message"] {
+    width: 100%; 
+    margin-bottom: 10px; 
+    border: 2px solid #A8D48C; 
+    border-radius: 10px; 
+    padding: 10px; 
+    margin-top: 3px; 
+}
   
 .error {
     color: red;
@@ -298,11 +318,11 @@ textarea {
     border-radius: 5px; 
     padding: 10px 30px; 
     cursor: pointer;
+    margin-top: 20px;
 }
 
-/* Optional: Hover effect */
 button[type="submit"]:hover {
-    background-color: darkgreen; /* Darker green on hover */
+    background-color:#346734; 
 }
 
 
