@@ -153,6 +153,22 @@ p {
     
 }
 
+.centered-text {
+    text-align: center;
+}
+
+.leaves {
+    display: flex; /* Make it a flex container */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    max-width: 10px; /* Set maximum width for images */
+    padding: 20px 40px; /* Add padding */
+  }
+
+  .leaves img {
+    max-width: 100%; /* Ensure images don't exceed the container width */
+  }
+
 .carousel{
     display: flex;
     justify-content: centre;
@@ -208,7 +224,25 @@ p {
     padding:20px;
 }
 
-
+form {
+    margin-top: 20px;
+  }
+  
+label {
+    display: block;
+  }
+  
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+.error {
+    color: red;
+    font-size: 14px;
+  }
 
 
 @media (min-width: 900px) {
