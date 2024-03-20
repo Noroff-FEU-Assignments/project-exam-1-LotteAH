@@ -26,6 +26,14 @@ main{
     box-sizing: border-box;
 }
 
+.about-container {
+    width: 100%;
+    max-width: 500px; /* Set a maximum width for the content */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
 .top-header {
     height: 20%;
     padding-top: 30px;
@@ -134,7 +142,7 @@ h1 {
     font-size: 3em;
     color: #346734;
     text-transform: uppercase;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 
 }
 
@@ -143,7 +151,24 @@ h2 {
     font-size: 2em;
     color: #346734;
     text-transform: uppercase;
+    line-height: 1.3em;
 
+}
+
+h3 {
+    font-family: 'Open Sans';
+    font-size: 1.2em;
+    color: #333333;
+    font-weight: 600;
+    line-height: 1.5em;
+}
+
+h4 {
+    font-family:'Londrina Solid';
+    font-size: 3em;
+    color: white;
+    text-transform: uppercase;
+    padding-bottom: 15px;
 }
 
 p {
@@ -151,26 +176,32 @@ p {
     font-size: 1em;
     color: #333333;
     padding-bottom: 20px;
-    
+   
 }
 
 .centered-text {
     text-align: center;
 }
 
-.leaves {
+.sucess-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 0; /* Adjust padding as needed */
+    flex-direction: column;
 }
 
-.leaves img {
-    max-width: 100%; /* Make the image responsive */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Ensure the image behaves as a block element */
-    margin: 0 auto; /* Center the image horizontally */
+.leaves-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto; /* This should center the leaves horizontally */
 }
+
+.leaves {
+    padding: 20px 0; 
+    max-width: 30%; 
+    height: auto;
+}
+
 
 .carousel{
     display: flex;
@@ -223,13 +254,14 @@ p {
 }
 
 
-.green_text-box-top {
+.green_text_box_top {
+    max-width: 100%;
+    height: auto;
     padding: 20px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     background-color: rgba(168, 212, 140, 0.25);
-    max-width: 100%; /* Ensures the image scales down to fit its container */
-    height: auto; /* Maintains the aspect ratio of the image */
+    margin-top: 30px;
 }
 
 .about-image {
@@ -258,10 +290,21 @@ p {
 
 .about_img_2 {
     display: flex;
+    align-content: center;
+    align-items: center;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     max-width: 100%; 
     height: auto; 
+}
+
+.quote {
+    max-width: 100%;
+    height: auto;
+    padding:60px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color:#346734;
 }
 
 form {
@@ -326,6 +369,18 @@ button[type="submit"]:hover {
     background-color:#346734; 
 }
 
+@media (max-width: 500px) {
+    .about-container {
+        max-width: 500px; /* Set a maximum width for the content */
+    }
+}
+
+@media (min-width: 501px) and (max-width: 900px) {
+    .about-container {
+        max-width: 100%; /* Allow content to scale up to 100% of available width */
+        margin: 0 20px; /* Add margins until 900px */
+    }
+}
 
 @media (min-width: 900px) {
     .x-container {
@@ -333,7 +388,15 @@ button[type="submit"]:hover {
         margin: 0 auto; /* Center the container */
         padding: 20px; /* Add padding around the container */
     }
-    
+  
+    .about-container {
+        max-width: 900px; /* Increase max-width to fill the whole width */
+        margin: 0 auto; /* Center the container */
+    }
+    main section {
+        width: 100%; /* Make each section fill the whole width */
+    }
+}
     nav {
         display: flex;
         justify-content: center;
