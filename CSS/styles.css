@@ -193,7 +193,9 @@ p {
 .leaves-container {
     display: flex;
     justify-content: center;
-    margin: 0 auto; /* This should center the leaves horizontally */
+    align-items: center;
+    flex-direction: column; /* Adjust the leaves container to column layout */
+    margin-top: 20px; /* Add some margin between the leaves and the button */
 }
 
 .leaves {
@@ -216,6 +218,61 @@ p {
     height: 300px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+}
+
+.blogpost{
+    display: flex;
+    justify-content: centre;
+}
+
+.blogpost-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.blogpost-img {
+    height: 300px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.blogpost-text {
+    height: 300px;
+    width: 300px;
+    padding: 20px;
+    border-color: #A8D48C;
+    border-width: 0.4em;
+    border-style: solid;
+    border-top: none; /* Hide the top border */
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.blogpost-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px; /* Adjust margin as needed */   
+  }
+
+  .mini-post {
+    display: flex; /* Make the container a flex container */
+    align-items: center; /* Center items vertically */
+    gap: 20px; /* Add a 10px gap between the image and text */
+    border-bottom: 5px solid #A8D48C; /* Add a light green line underneath */
+    padding-bottom: 10px; /* Add some space below */
+    margin-top: 30px;
+}
+
+.mini-post-img img {
+    max-width: 100px; /* Adjust the maximum width of the image */
+    height: auto; /* Ensure the image height adjusts proportionally */
+}
+
+.mini-post-tekst h2 {
+    margin: 0; /* Remove default margins */
+    font-size: 1.5em; /* Adjust font size as needed */
 }
 
 .arrow {
@@ -295,16 +352,21 @@ p {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     max-width: 100%; 
-    height: auto; 
+    height: auto;
+    flex: cover;
 }
 
 .quote {
     max-width: 100%;
     height: auto;
-    padding:60px;
+    padding: 60px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    background-color:#346734;
+    background-color: #346734;
+    text-align: center; /* Align text horizontally */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
 }
 
 form {
@@ -365,22 +427,45 @@ textarea[name="message"] {
     margin-top: 20px;
 }
 
+.button-back  {
+    background-color: #669966; 
+    color: white;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 30px; 
+    cursor: pointer;
+    margin-top: 20px;  
+    text-decoration: none;
+}
+
+.button-back:hover {
+    background-color:#346734; 
+}
+
 button[type="submit"]:hover {
     background-color:#346734; 
 }
 
-@media (max-width: 500px) {
-    .about-container {
-        max-width: 500px; /* Set a maximum width for the content */
-    }
+.button-wrapper {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    margin-top: 20px; /* Adjust margin to create space between leaves and button */
 }
 
-@media (min-width: 501px) and (max-width: 900px) {
+@media (min-width: 501px) and (max-width: 899px) {
     .about-container {
-        max-width: 100%; /* Allow content to scale up to 100% of available width */
-        margin: 0 20px; /* Add margins until 900px */
+      width: 100%;
+      max-width: 500px; /* Set a maximum width for the content */
+      margin: 0 auto; /* Center the container horizontally */
+      padding: 20px;
+      box-sizing: border-box;
+      margin-left: calc((100% - 500px) / 2); /* Calculate left margin */
+      margin-right: calc((100% - 500px) / 2); /* Calculate right margin */
     }
-}
+  }
 
 @media (min-width: 900px) {
     .x-container {
@@ -388,15 +473,18 @@ button[type="submit"]:hover {
         margin: 0 auto; /* Center the container */
         padding: 20px; /* Add padding around the container */
     }
-  
+
     .about-container {
-        max-width: 900px; /* Increase max-width to fill the whole width */
-        margin: 0 auto; /* Center the container */
+        display: grid;
+        grid-template-columns: 1fr; /* Set one column for wider view */
+        gap: 20px; /* Add gap between grid items */
+        max-width: 1000px;
     }
+
     main section {
         width: 100%; /* Make each section fill the whole width */
     }
-}
+
     nav {
         display: flex;
         justify-content: center;
@@ -425,28 +513,72 @@ button[type="submit"]:hover {
     main {
         display: flex;
         justify-content: space-between;
-      }
-    
-      main section {
-        flex-basis: 48%;
-      }
-    
-      .about-image {
-        max-height:400px;
     }
+
+    main section {
+        flex-basis: 48%;
+    }
+
+    .about-image {
+        max-height: 500px; /* Increase max height for the image */
+        width: 100%; /* Ensure image fills its container */
+        margin: 0; /* Remove margin */
+    }
+
+    .green_text_box_bottom,
+    .green_text_box_top,
+    .quote {
+        padding: 30px; /* Increase padding for paragraphs and quote */
+        margin: 0; /* Remove margin */
+    }
+    .about_img_2 {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius:20px;
+        border-top-right-radius: 0px;   
+    }
+    .green_text_box_top {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius:20px;
+        border-top-right-radius: 0px;    
+    }
+    .green_text_box_bottom {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius:0px;
+        border-top-right-radius: 20px;     
+    }
+    .quote {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius:0px;
+        border-top-right-radius: 20px;     
+    }
+
+    .section-flex {
+        display: grid; /* Change display property to grid */
+        grid-template-columns: 1fr 1fr; /* Two columns in each grid item */
+        gap: 0; /* No gap between grid items */
+    }
+
+    /* Optional: Adjust styles for the quote div */
+    .quote {
+        width: 100%; /* Make the quote div fill the entire width */
+    }
+
     .footer {
         min-height: 100px;
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
 
-     }
-
-     .footer-logo {
-        justify-content: left; 
+    .footer-logo {
+        justify-content: left;
         padding-left: 20px;
     }
-    
+
     .footer-some {
-        justify-content: right; 
+        justify-content: right;
         padding-top: 65px;
     }
+}
