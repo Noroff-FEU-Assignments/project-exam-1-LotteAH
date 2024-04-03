@@ -18,10 +18,15 @@ main{
     margin:20px;
 }
 
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Add gap between elements */
+}
+
 .x-container {
-    width: 100%;
-    max-width: 900px; /* Set a maximum width for the content */
-    margin: 0 auto; /* Center the container horizontally */
+    max-width: 1200px; /* Set maximum width for wide content */
+    margin: 0 auto; /* Center the wide content horizontally */
     padding: 20px;
     box-sizing: border-box;
 }
@@ -170,6 +175,13 @@ h4 {
     text-transform: uppercase;
     padding-bottom: 15px;
 }
+h5 {
+    font-family: 'Open Sans';
+    font-size: 1.2em;
+    color: #333333;
+    font-weight: 800;
+    line-height: 1.5em; 
+}
 
 p {
     font-family:'Open Sans';
@@ -273,6 +285,18 @@ p {
 .mini-post-tekst h2 {
     margin: 0; /* Remove default margins */
     font-size: 1.5em; /* Adjust font size as needed */
+}
+
+.blog-specific-container {
+    flex-direction: column; /* Stack sections vertically on smaller screens */
+  }
+
+
+.blog-img {
+    max-width: 100%; /* Ensures the image doesn't exceed the width of its container */
+    height: auto; /* Allows the image to adjust its height proportionally */
+    border-radius: 20px;
+    margin-bottom: 20px;
 }
 
 .arrow {
@@ -473,7 +497,19 @@ button[type="submit"]:hover {
         margin: 0 auto; /* Center the container */
         padding: 20px; /* Add padding around the container */
     }
-
+    .main-container {
+        display: grid; /* Use CSS Grid */
+        grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+        gap: 20px; /* Add gap between columns */
+        align-items: center; /* Center items vertically */
+        text-align: center; /* Center text */
+      }
+    
+      .main-container h1 {
+        grid-column: span 2; /* Make h1 span both columns */
+        text-align: left; /* Align h1 text to the left */
+        margin-bottom: 20px; /* Add margin between h1 and sections */
+      }
     .about-container {
         display: grid;
         grid-template-columns: 1fr; /* Set one column for wider view */
@@ -555,6 +591,19 @@ button[type="submit"]:hover {
         border-top-right-radius: 20px;     
     }
 
+    .blog-specific-container {
+        flex-direction: row; /* Arrange sections side by side on wider screens */
+      }
+    
+      main section:first-child {
+        flex-basis: calc(75% - 20px); /* Set the width of the first section to 75% on wider screens */
+        margin-right: 40px; /* Add right margin to create space between sections */
+      }
+    
+      main section:last-child {
+        flex-basis: calc(25% - 20px); /* Set the width of the second section to 25% on wider screens */
+      }
+    
     .section-flex {
         display: grid; /* Change display property to grid */
         grid-template-columns: 1fr 1fr; /* Two columns in each grid item */
@@ -581,4 +630,11 @@ button[type="submit"]:hover {
         justify-content: right;
         padding-top: 65px;
     }
+
+    @media (min-width: 1200px) {
+        .x-container {
+          margin-left: auto; /* Add white space on the left */
+          margin-right: auto; /* Add white space on the right */
+        }
+      }
 }
