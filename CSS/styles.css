@@ -217,10 +217,17 @@ p {
 }
 
 
-.carousel{
+.carousel {
     display: flex;
-    justify-content: centre;
-}
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+.carousel .carousel-item {
+    flex: 0 0 calc(100% / 3); /* Adjust the width to display three items side by side */
+    scroll-snap-align: start;
+  }
 
 .carousel-container {
     display: flex;
@@ -663,6 +670,10 @@ button[type="submit"]:hover {
         flex-basis: 48%;
     }
 
+    .carousel .carousel-item {
+        flex: 0 0 calc(100% / 3); /* Set the width to display three items side by side */
+      }
+      
     .about-image {
         max-height: 500px; /* Increase max height for the image */
         width: 100%; /* Ensure image fills its container */
