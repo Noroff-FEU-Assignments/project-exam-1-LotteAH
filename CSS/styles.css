@@ -215,22 +215,29 @@ p {
     max-width: 30%; 
     height: auto;
 }
-
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .carousel {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-  }
+    align-items: flex-start; /* Align items to the start */
+    padding: 0 20px; /* Add padding to the carousel container */
+}
 
-.carousel .carousel-item {
-    flex: 0 0 calc(100% / 3); /* Adjust the width to display three items side by side */
-    scroll-snap-align: start;
-  }
+.carousel-item {
+    flex: 0 0 calc(33.33% - 20px); /* Adjust width for larger screens */
+    max-width: none; /* Remove maximum width for larger screens */
+}
 
-.carousel-container {
+.carousel-content {
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 .carousel-img {
@@ -670,10 +677,35 @@ button[type="submit"]:hover {
         flex-basis: 48%;
     }
 
-    .carousel .carousel-item {
-        flex: 0 0 calc(100% / 3); /* Set the width to display three items side by side */
-      }
-      
+    .carousel-container {
+        justify-content: flex-start; /* Align carousel items to the start */
+    }
+
+    .carousel-item {
+        flex: 0 0 calc(100% - 20px); /* Reset width for smaller screens */
+    }
+
+    .carousel-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 10px; /* Adjust margin as needed */
+    }
+    
+    .carousel-text {
+        height: 300px;
+        width: 300px;
+        padding: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background-color:rgba(168, 212, 140, 0.25);
+    }
+    
+    .carousel-img {
+        height: 300px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
     .about-image {
         max-height: 500px; /* Increase max height for the image */
         width: 100%; /* Ensure image fills its container */
