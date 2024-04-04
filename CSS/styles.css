@@ -276,28 +276,48 @@ p {
     margin: 0 10px; /* Adjust margin as needed */   
   }
 
+  .blog-section .mini-post-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .blog-section .mini-post {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #333333;
+  }
+
+  
   .mini-post {
-    display: flex; /* Make the container a flex container */
-    align-items: center; /* Center items vertically */
+    display: flex;
+    align-items: center;
     gap: 20px; /* Add a 10px gap between the image and text */
     border-bottom: 5px solid #A8D48C; /* Add a light green line underneath */
     padding-bottom: 10px; /* Add some space below */
     margin-top: 30px;
-}
-
-.mini-post-img img {
-    max-width: 100px; /* Adjust the maximum width of the image */
-    height: auto; /* Ensure the image height adjusts proportionally */
-}
-
-.mini-post-tekst h2 {
-    margin: 0; /* Remove default margins */
-    font-size: 1.5em; /* Adjust font size as needed */
-}
+  }
+  
+  .mini-post-img img {
+    width: 100px; /* Adjust image width as needed */
+    height: auto;
+  }
+  
+  .mini-post-tekst h2 {
+    margin: 0;
+    font-size: 0.5em;
+  }
 
 .blog-specific-container {
     flex-direction: column; /* Stack sections vertically on smaller screens */
-  }
+}
+
+.mini-post-container {
+    display: flex;
+    flex-direction: column;
+}
 
 
 .blog-img {
@@ -496,6 +516,77 @@ button[type="submit"]:hover {
     margin-top: 20px; /* Adjust margin to create space between leaves and button */
 }
 
+    /* Apply styling to h5 headings */
+    .post-wrapper h2 {
+        font-family: 'Open Sans';
+        font-size: 1.2em;
+        color: #333333;
+        font-weight: 800;
+        line-height: 1.5em; 
+    }
+    
+    /* Apply styling to paragraphs */
+    .post-wrapper .post-excerpt {
+        font-family: 'Open Sans';
+        font-size: 1em;
+        color: #333333;
+        padding-bottom: 20px;
+    }
+    
+    /* Apply styling to the container wrapping the image and text */
+    .post-wrapper {
+        margin-bottom: 20px;
+        overflow: hidden; /* Ensure border doesn't overflow */
+    }
+    
+    /* Apply styling to the image */
+    .post-wrapper .blogpost-img {
+        width: 100%; /* Ensure image fills its container */
+        height: auto; /* Maintain aspect ratio */
+    }
+    
+    figcaption {
+        font-family: 'Open Sans';
+        font-size: 0.9em;
+        font-weight: 200;
+        color: #333333;
+        margin-top: 5px;
+        margin-bottom: 40px; /* Add some space between the image and the caption */
+      }
+        
+      .post-content h5 {
+        font-family: 'Open Sans';
+        font-size: 1.3em;
+        color: #333333;
+        font-weight: 800;
+        line-height: 1.5em;
+        padding-bottom: 5px;
+      }
+      
+      .post-content p {
+        font-family:'Open Sans';
+        font-size: 1em;
+        color: #333333;
+        padding-bottom: 40px;
+      }   
+
+      .post-content li {
+        font-family:'Open Sans';
+        font-size: 1em;
+        color: #333333;
+        padding-bottom: 5px;
+      }   
+
+      .post-content li:last-child {
+        padding-bottom: 40px; /* Override padding for the last list item */
+    }
+        
+      .post-content img {
+        border-radius: 20px;
+        max-width: 100%; /* Ensure the image doesn't exceed the width of its container */
+        height: auto; /* Allow the image to adjust its height proportionally */
+    }
+
 @media (min-width: 501px) and (max-width: 899px) {
     .about-container {
       width: 100%;
@@ -607,11 +698,6 @@ button[type="submit"]:hover {
         border-bottom-left-radius:0px;
         border-top-right-radius: 20px;     
     }
-
-    .blog-specific-container {
-        flex-direction: row; /* Arrange sections side by side on wider screens */
-      }
-    
       main section:first-child {
         flex-basis: calc(75% - 20px); /* Set the width of the first section to 75% on wider screens */
         margin-right: 40px; /* Add right margin to create space between sections */
@@ -631,7 +717,7 @@ button[type="submit"]:hover {
     .quote {
         width: 100%; /* Make the quote div fill the entire width */
     }
-
+    
     .footer {
         min-height: 100px;
         display: grid;

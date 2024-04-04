@@ -24,16 +24,16 @@ async function getBlogPosts() {
       let featuredMediaUrl = "";
 
       // Fetch the details of the featured image
-      const mediaResponse = await fetch(`${mediaUrl}/${featuredMediaId}`);
-      if (mediaResponse.ok) {
-        const mediaData = await mediaResponse.json();
-        featuredMediaUrl = mediaData.source_url;
-      } else {
-        featuredMediaUrl = "path/to/default/image.jpg"; // Provide a default image URL
+      if (featuredMediaId) {
+        const mediaResponse = await fetch(`${mediaUrl}/${featuredMediaId}`);
+        if (mediaResponse.ok) {
+          const mediaData = await mediaResponse.json();
+          featuredMediaUrl = mediaData.source_url;
+        }
       }
 
       const postHTML = `
-        <section class="blogpost">
+        <section class="blogpost" data-id="${post.id}">
           <div class="blogpost-container">
             <div class="blogpost-content">
               <img src="${featuredMediaUrl}" alt="${post.title.rendered}" class="blogpost-img"/>
@@ -47,6 +47,9 @@ async function getBlogPosts() {
       
       const postElement = document.createElement('div');
       postElement.innerHTML = postHTML;
+      postElement.addEventListener('click', () => {
+        window.location.href = `blog_specific.html?id=${post.id}`;
+      });
       
       resultsContainer.appendChild(postElement);
     }
