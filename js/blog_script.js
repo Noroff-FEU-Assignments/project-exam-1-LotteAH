@@ -100,6 +100,11 @@ async function loadMorePosts() {
     }
 
     displayPosts(posts);
+
+    // Check if total posts loaded so far >= total posts available
+    if ((currentPage * postsPerPage) >= totalPosts) {
+      removeLoadMoreButton();
+    }
   } catch (error) {
     console.error("An error occurred:", error);
     hideLoadingIndicator();
