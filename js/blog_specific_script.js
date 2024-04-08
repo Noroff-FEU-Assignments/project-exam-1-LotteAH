@@ -34,6 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
       blogTitleElement.textContent = `Blog | ${post.title.rendered}`; // Update title text
     }
 
+    // Update document title
+    document.title = `Blog | ${post.title.rendered}`;
+
     const blogSpecificContainer = document.querySelector(".blog-specific-container");
 
     let postHTML = `
