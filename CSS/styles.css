@@ -254,10 +254,20 @@ p {
     justify-items: center;
     align-items: center;
 }
+  
+  .blogpost-container {
+    max-width: 280px; /* Adjust as needed */
+    /* Add additional styling as per your design */
+  }
 
 .blogpost{
     display: flex;
 }
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Initially, show 1 item per row */
+    gap: 20px;
+ } /* Adjust the gap between items */
 
 .blogpost-container {
     display: flex;
@@ -690,6 +700,13 @@ button[type="submit"]:hover {
         text-align: left; /* Align h1 text to the left */
         margin-bottom: 20px; /* Add margin between h1 and sections */
       }
+      #blogPosts {
+        grid-template-columns: repeat(2, minmax(300px, 1fr)); /* Show 2 items per row */
+      }
+    
+    .blog-container { 
+        grid-template-columns: repeat(2, minmax(300px, 1fr)); /* Show 2 items per row */
+      }
 
     .about-container {
         display: grid;
@@ -830,4 +847,17 @@ button[type="submit"]:hover {
         justify-content: right;
         padding-top: 65px;
     }
+
+    @media screen and (min-width: 1000px) {
+        #blogPosts {
+          grid-template-columns: repeat(3, minmax(300px, 1fr)); /* Show 3 items per row */
+        }
+      }
+      
+      @media screen and (min-width: 1500px) {
+        #blogPosts {
+          grid-template-columns: repeat(4, minmax(300px, 1fr)); /* Show 4 items per row */
+        }
+      }
+      
 }
