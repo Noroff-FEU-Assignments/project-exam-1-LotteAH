@@ -5,31 +5,28 @@ const loadingIndicator = document.querySelector(".loader");
 const postUrl = "http://blooms-and-bounty.local/wp-json/wp/v2/posts";
 const mediaUrl = "http://blooms-and-bounty.local/wp-json/wp/v2/media";
 let currentPage = 1; // Track the current page
-let totalPages = 1; // Track the total number of pages
+let totalPosts = 0; // Track the total number of posts
+const postsPerPage = 10; // Number of posts to load per page
 
-async function getBlogPosts(page = 1) {
+async function getBlogPosts() {
   try {
     showLoadingIndicator();
-    const response = await fetch(`${postUrl}?page=${page}&per_page=10`); // Fetch 10 posts per page
+    const response = await fetch(`${postUrl}?per_page=${postsPerPage}`);
 
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
-    const posts = await response.json();
+    const totalCount = response.headers.get("X-WP-Total");
+    totalPosts = parseInt(totalCount); // Total number of posts
 
-    if (page === 1) {
-      // If this is the first page, update the total pages count
-      const headers = response.headers;
-      const totalCount = headers.get("X-WP-Total");
-      totalPages = Math.ceil(totalCount / 10); // Assuming 10 posts per page
-    }
+    const posts = await response.json();
 
     resultsContainer.innerHTML = "";
     hideLoadingIndicator();
 
     displayPosts(posts);
-    createPaginationButtons();
+    createLoadMoreButton();
   } catch (error) {
     console.error("An error occurred:", error);
 
@@ -83,30 +80,45 @@ function displayPosts(posts) {
   });
 }
 
-function createPaginationButtons() {
-  const paginationContainer = document.querySelector(".pagination");
-  paginationContainer.innerHTML = "";
+async function loadMorePosts() {
+  try {
+    showLoadingIndicator();
+    const response = await fetch(`${postUrl}?page=${currentPage + 1}&per_page=${postsPerPage}`);
 
-  const prevButton = document.createElement("button");
-  prevButton.textContent = "Previous";
-  prevButton.addEventListener("click", () => {
-    if (currentPage > 1) {
-      currentPage--;
-      getBlogPosts(currentPage);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
     }
-  });
 
-  const nextButton = document.createElement("button");
-  nextButton.textContent = "Next";
-  nextButton.addEventListener("click", () => {
-    if (currentPage < totalPages) {
-      currentPage++;
-      getBlogPosts(currentPage);
+    const posts = await response.json();
+    currentPage++; // Increment the current page after fetching new posts
+
+    hideLoadingIndicator();
+
+    if (posts.length === 0) {
+      removeLoadMoreButton();
+      return;
     }
-  });
 
-  paginationContainer.appendChild(prevButton);
-  paginationContainer.appendChild(nextButton);
+    displayPosts(posts);
+  } catch (error) {
+    console.error("An error occurred:", error);
+    hideLoadingIndicator();
+  }
+}
+
+function createLoadMoreButton() {
+  const loadMoreBtn = document.createElement("button");
+  loadMoreBtn.textContent = "Load More";
+  loadMoreBtn.classList.add("load-more-btn");
+  loadMoreBtn.addEventListener("click", loadMorePosts);
+  resultsContainer.insertAdjacentElement("afterend", loadMoreBtn);
+}
+
+function removeLoadMoreButton() {
+  const loadMoreBtn = document.querySelector(".load-more-btn");
+  if (loadMoreBtn) {
+    loadMoreBtn.remove();
+  }
 }
 
 getBlogPosts();
