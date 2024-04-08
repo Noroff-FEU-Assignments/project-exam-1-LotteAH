@@ -669,6 +669,27 @@ button[type="submit"]:hover {
         max-width: 100%; /* Ensure the image doesn't exceed the width of its container */
         height: auto; /* Allow the image to adjust its height proportionally */
     }
+    
+    .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      
+      .pagination button {
+        padding: 10px 20px;
+        margin: 0 5px;
+        background-color: #669966;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 150px; /* Adjust the width as needed */
+      }
+      
+      .pagination button:hover {
+        background-color: #346734;
+      }
 
 @media (min-width: 501px) and (max-width: 899px) {
     .about-container {
