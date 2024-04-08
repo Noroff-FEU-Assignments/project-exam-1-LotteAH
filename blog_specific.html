@@ -39,7 +39,15 @@
 
     <main class="x-container">
       <div class="loader"></div>
-      <section class="blog-specific-container"></section>
+      <section>
+        <!-- Title element for dynamic title -->
+        <h2 id="blogTitle" class="blog-title"></h2>
+
+        <section class="blog-specific-container"></section>
+        <div class="button-wrapper">
+          <a href="blog.html" class="button-back">Back to blog</a>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
@@ -77,7 +85,7 @@
 
     <div id="imageModal" class="modal">
       <span class="close">&times;</span>
-      <img class="modal-content" id="modalImage" />
+      <img class="modal-content" id="modalImage" src="" alt="Modal Image" />
     </div>
 
     <script src="js/blog_specific_script.js" type="module"></script>

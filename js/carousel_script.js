@@ -55,9 +55,14 @@ document.addEventListener("DOMContentLoaded", function () {
             title.textContent = post.title.rendered;
             textContainer.appendChild(title);
 
+            // Create a link to navigate to the specific post
+            const postLink = document.createElement("a");
+            postLink.href = `blog_specific.html?id=${post.id}`;
+            postLink.appendChild(image);
+            postLink.appendChild(textContainer);
+
             carouselContent.innerHTML = "";
-            carouselContent.appendChild(image);
-            carouselContent.appendChild(textContainer);
+            carouselContent.appendChild(postLink);
         } else {
             carouselContent.innerHTML = "Featured image not available";
         }

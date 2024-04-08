@@ -308,26 +308,34 @@ p {
   }
   
   .modal-content {
-    margin: auto;
-    display: block;
-    max-width: 80%;
-    max-height: 80%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90%;
     padding: 20px; /* Add padding for content inside the modal */
+    background-color: #fff; /* Set a background color for the modal content */
+    text-align: center; /* Center align content horizontally */
   }
   
   #modalImage {
-    width: 100%; /* Ensure the image takes full width inside the modal */
+    max-width: 100%; /* Ensure the image does not exceed modal width */
+    max-height: 100%; /* Ensure the image does not exceed modal height */
     height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure image is displayed as a block element */
+    margin: 0 auto; /* Center align the image horizontally */
   }
   
-  .close {
-    color: #fff;
-    font-size: 28px;
-    font-weight: bold;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    cursor: pointer;
+
+  .blog-title {
+    font-size: 1.2em; /* Adjust font size as needed */
+    font-weight: 100; /* Adjust font weight as needed */
+    color: #333; /* Set text color */
+    text-align: center; /* Center align the title */
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-transform: none; /* Prevent text from being all capital letters */
   }
   
   
@@ -666,7 +674,6 @@ button[type="submit"]:hover {
 
 @media (min-width: 900px) {
     .x-container {
-        max-width: 1000px;
         margin: 0 auto; /* Center the container */
         padding: 20px; /* Add padding around the container */
     }
@@ -678,11 +685,12 @@ button[type="submit"]:hover {
         text-align: center; /* Center text */
       }
     
-      .main-container h1 {
+    .main-container h1 {
         grid-column: span 2; /* Make h1 span both columns */
         text-align: left; /* Align h1 text to the left */
         margin-bottom: 20px; /* Add margin between h1 and sections */
       }
+
     .about-container {
         display: grid;
         grid-template-columns: 1fr; /* Set one column for wider view */
@@ -724,9 +732,6 @@ button[type="submit"]:hover {
         justify-content: space-between;
     }
 
-    main section {
-        flex-basis: 48%;
-    }
 
     .carousel-container {
         justify-content: flex-start; /* Align carousel items to the start */
@@ -763,6 +768,12 @@ button[type="submit"]:hover {
         margin: 0; /* Remove margin */
     }
 
+    .blog-specific-container {
+        flex-direction: row; /* Arrange sections horizontally on wider screens */
+        /* Adjust width as needed */
+        margin: auto; /* Center the container horizontally */
+      }
+    
     .green_text_box_bottom,
     .green_text_box_top,
     .quote {
@@ -792,14 +803,6 @@ button[type="submit"]:hover {
         border-bottom-left-radius:0px;
         border-top-right-radius: 20px;     
     }
-      main section:first-child {
-        flex-basis: calc(75% - 20px); /* Set the width of the first section to 75% on wider screens */
-        margin-right: 40px; /* Add right margin to create space between sections */
-      }
-    
-      main section:last-child {
-        flex-basis: calc(25% - 20px); /* Set the width of the second section to 25% on wider screens */
-      }
     
     .section-flex {
         display: grid; /* Change display property to grid */
@@ -827,11 +830,4 @@ button[type="submit"]:hover {
         justify-content: right;
         padding-top: 65px;
     }
-
-    @media (min-width: 1400px) {
-        .x-container {
-          margin-left: auto; /* Add white space on the left */
-          margin-right: auto; /* Add white space on the right */
-        }
-      }
 }
