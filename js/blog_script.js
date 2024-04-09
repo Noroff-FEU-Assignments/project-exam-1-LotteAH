@@ -113,7 +113,7 @@ async function loadMorePosts() {
 
 function createLoadMoreButton() {
   const loadMoreBtn = document.createElement("button");
-  loadMoreBtn.textContent = "Load More";
+  loadMoreBtn.textContent = "LOAD MORE";
   loadMoreBtn.classList.add("load-more-btn");
   loadMoreBtn.addEventListener("click", loadMorePosts);
   resultsContainer.insertAdjacentElement("afterend", loadMoreBtn);

@@ -24,13 +24,15 @@ main{
     display: flex;
     flex-direction: column; /* Change flex direction to column */
     gap: 20px; /* Add gap between elements */
+    align-items: center;
   }
 
 .x-container {
-    max-width: 1200px; /* Set maximum width for wide content */
+    max-width: 1400px; /* Set maximum width for wide content */
     margin: 0 auto; /* Center the wide content horizontally */
     padding: 20px;
     box-sizing: border-box;
+    align-items: center;
 }
 
 .about-container {
@@ -116,6 +118,7 @@ footer {
     left: 0;
     width: 100%;
     padding-bottom: 20px;
+    margin-top: 40px;
 }
 
 .footer-logo {
@@ -291,9 +294,10 @@ p {
   }
   
   .index-about-image {
-    max-width: 100%;
+    max-width: 70%;
     border-radius: 50%;
     border: 0.5em solid #A8D48C;
+    margin-top: 40px;
   }
   
   .index-centered-text {
@@ -508,7 +512,7 @@ p {
     border-radius: 50%;
     border: 0.5em solid #A8D48C;
     margin: 40px;
-    max-width: 100%; 
+    max-width: 60%; 
     width: auto;
     height: auto;
 }
@@ -529,15 +533,12 @@ p {
 }
 
 .about_img_2 {
-    display: flex;
-    align-content: center;
-    align-items: center;
+    max-width: 100%;
+    height: 100%; /* Set height to 100% to fill out the container */
+    object-fit: cover; /* Ensures the image covers the entire container */
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    max-width: 100%; 
-    height: auto;
-    flex: cover;
-}
+  }
 
 .quote {
     max-width: 100%;
@@ -683,6 +684,7 @@ button[type="submit"]:hover {
         color: #333333;
         margin-top: 5px;
         margin-bottom: 40px; /* Add some space between the image and the caption */
+        font-style: italic;
       }
         
       .post-content h5 {
@@ -743,6 +745,8 @@ button[type="submit"]:hover {
         border-radius: 5px;
         cursor: pointer;
         width: 150px; /* Adjust the width as needed */
+        font-family: 'Open Sans';
+        font-weight: 600;
       }
       
       .load-more-btn:hover {
@@ -750,17 +754,7 @@ button[type="submit"]:hover {
       }
       
 
-@media (min-width: 501px) and (max-width: 899px) {
-    .about-container {
-      width: 100%;
-      max-width: 500px; /* Set a maximum width for the content */
-      margin: 0 auto; /* Center the container horizontally */
-      padding: 20px;
-      box-sizing: border-box;
-      margin-left: calc((100% - 500px) / 2); /* Calculate left margin */
-      margin-right: calc((100% - 500px) / 2); /* Calculate right margin */
-    }
-  }
+
   @media (max-width: 899px) {
     /* Hide all carousel content containers */
     .carousel-content-container {
@@ -782,13 +776,13 @@ button[type="submit"]:hover {
     .x-container {
         margin: 0 auto; /* Center the container */
         padding: 20px; /* Add padding around the container */
+        align-items: center; /* Center items vertically */
     }
     .main-container {
         display: grid; /* Use CSS Grid */
         grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
         gap: 20px; /* Add gap between columns */
-        align-items: center; /* Center items vertically */
-        text-align: center; /* Center text */
+        align-items: center;
       }
     
     .main-container h1 {
@@ -937,10 +931,25 @@ button[type="submit"]:hover {
         .carousel-content-container {
             display: flex;
           }
-      @media screen and (min-width: 1500px) {
+      @media screen and (min-width: 1400px) {
         #blogPosts {
           grid-template-columns: repeat(4, minmax(300px, 1fr)); /* Show 4 items per row */
         }
       }
       
 }
+
+
+
+/* Extra
+@media (min-width: 501px) and (max-width: 899px) {
+    .about-container {
+      width: 100%;
+      max-width: 500px; /* Set a maximum width for the content */
+      margin: 0 auto; /* Center the container horizontally */
+      padding: 20px;
+      box-sizing: border-box;
+      margin-left: calc((100% - 500px) / 2); /* Calculate left margin */
+      margin-right: calc((100% - 500px) / 2); /* Calculate right margin */
+    }
+  } */
