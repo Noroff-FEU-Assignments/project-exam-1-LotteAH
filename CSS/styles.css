@@ -8,6 +8,8 @@
 }
 a {
     padding: 0px;
+    text-decoration: none;
+
 }
 html, body {
     font-family: "OpenSans", Verdana, Geneva, Tahoma, sans-serif;
@@ -20,9 +22,9 @@ main{
 
 .main-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Change flex direction to column */
     gap: 20px; /* Add gap between elements */
-}
+  }
 
 .x-container {
     max-width: 1200px; /* Set maximum width for wide content */
@@ -157,6 +159,7 @@ h2 {
     color: #346734;
     text-transform: uppercase;
     line-height: 1.3em;
+    text-decoration: none;
 
 }
 
@@ -215,11 +218,18 @@ p {
     max-width: 30%; 
     height: auto;
 }
+
 .carousel-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
+.index {
+display: grid
+  grid-template-columns: 3fr /* Single column layout */
+  gap: 20px; /* Add gap between grid items */
+  }
 
 .carousel {
     display: flex;
@@ -228,23 +238,61 @@ p {
     -webkit-overflow-scrolling: touch;
     align-items: flex-start; /* Align items to the start */
     padding: 0 20px; /* Add padding to the carousel container */
+    grid-row: span 2; /* Span the carousel section across two rows */
 }
 
 .carousel-item {
     flex: 0 0 calc(33.33% - 20px); /* Adjust width for larger screens */
     max-width: none; /* Remove maximum width for larger screens */
+    text-decoration: none;
 }
 
 .carousel-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-decoration: none;
 }
 .carousel-img {
     height: 300px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
+.carousel-text {
+    height: 300px;
+    width: 300px;
+    padding: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: rgba(168, 212, 140, 0.25);
+    text-decoration: none;
+}
+
+.carousel-text a {
+    text-decoration: none; /* Remove underline decoration from links inside .carousel-text */
+}
+.index-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px; /* Add padding for spacing */
+  }
+
+  .index-about-text {
+    max-width: 100%;
+    margin-bottom: 20px; /* Add margin below the image */
+  }
+  
+  .index-about-image {
+    max-width: 100%;
+    border-radius: 50%;
+    border: 0.5em solid #A8D48C;
+  }
+  
+  .index-centered-text {
+    max-width: 100%;
+  }
 
 #blogPosts {
     display: grid;
@@ -255,7 +303,7 @@ p {
     align-items: center;
 }
   
-  .blogpost-container {
+.blogpost-container {
     max-width: 280px; /* Adjust as needed */
     /* Add additional styling as per your design */
   }
@@ -263,6 +311,7 @@ p {
 .blogpost{
     display: flex;
 }
+
 .blog-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Initially, show 1 item per row */
@@ -425,16 +474,9 @@ p {
     flex-direction: column;
     align-items: center;
     margin: 0 10px; /* Adjust margin as needed */
+    overflow: hidden; /* Hide overflowing content */
   }
 
-.carousel-text {
-    height: 300px;
-    width: 300px;
-    padding: 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    background-color:rgba(168, 212, 140, 0.25);
-}
 
 .green_text_box_bottom {
     max-width: 100%;
@@ -816,7 +858,10 @@ button[type="submit"]:hover {
         width: 100%; /* Ensure image fills its container */
         margin: 0; /* Remove margin */
     }
-
+    .index-about {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
     .blog-specific-container {
         flex-direction: row; /* Arrange sections horizontally on wider screens */
         /* Adjust width as needed */
