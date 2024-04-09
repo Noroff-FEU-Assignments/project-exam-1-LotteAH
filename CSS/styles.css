@@ -218,59 +218,65 @@ p {
     max-width: 30%; 
     height: auto;
 }
-
-.carousel-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-}
 .index {
-display: grid
-  grid-template-columns: 3fr /* Single column layout */
-  gap: 20px; /* Add gap between grid items */
-  }
+    display: grid
+      grid-template-columns: 3fr /* Single column layout */
+      gap: 20px; /* Add gap between grid items */
+      }
 
-.carousel {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    align-items: flex-start; /* Align items to the start */
-    padding: 0 20px; /* Add padding to the carousel container */
-    grid-row: span 2; /* Span the carousel section across two rows */
-}
-
-.carousel-item {
-    flex: 0 0 calc(33.33% - 20px); /* Adjust width for larger screens */
-    max-width: none; /* Remove maximum width for larger screens */
-    text-decoration: none;
-}
-
-.carousel-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-}
-.carousel-img {
-    height: 300px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-.carousel-text {
-    height: 300px;
-    width: 300px;
-    padding: 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    background-color: rgba(168, 212, 140, 0.25);
-    text-decoration: none;
-}
-
-.carousel-text a {
-    text-decoration: none; /* Remove underline decoration from links inside .carousel-text */
-}
+      .carousel-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+      }
+      
+      .carousel {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        align-items: flex-start; /* Align items to the start */
+        padding: 0 20px; /* Add padding to the carousel container */
+        grid-row: span 2; /* Span the carousel section across two rows */
+      }
+      
+      .carousel-item {
+        flex: 0 0 calc(33.33% - 20px); /* Adjust width for larger screens */
+        max-width: none; /* Remove maximum width for larger screens */
+        text-decoration: none;
+      }
+      
+      .carousel-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+      }
+      
+      /* Add styles for the carousel content container */
+      .carousel-content-container {
+        display: flex;
+        scroll-snap-type: x mandatory;
+      }
+      
+      /* Adjust styles for carousel item content */
+      .carousel-img {
+        height: 300px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+      
+      .carousel-text {
+        height: 300px;
+        width: 300px;
+        padding: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background-color: rgba(168, 212, 140, 0.25);
+        text-decoration: none;
+      }
+      
 .index-about {
     display: flex;
     flex-direction: column;
@@ -743,7 +749,23 @@ button[type="submit"]:hover {
         background-color: #346734;
       }
       
-
+      @media (max-width: 899px) {
+        /* Hide all carousel content containers */
+        .carousel-content-container {
+          display: none;
+          padding:0px;
+        }
+      
+        /* Show only the first and second carousel content containers */
+        .carousel-content-container:nth-child(-n+2) {
+          display: block;
+        padding: 0;
+        margin:0;
+        }
+        .carousel{
+            padding:0px;
+      }
+  
 @media (min-width: 501px) and (max-width: 899px) {
     .about-container {
       width: 100%;
@@ -754,8 +776,7 @@ button[type="submit"]:hover {
       margin-left: calc((100% - 500px) / 2); /* Calculate left margin */
       margin-right: calc((100% - 500px) / 2); /* Calculate right margin */
     }
-  }
-
+ 
 @media (min-width: 900px) {
     .x-container {
         margin: 0 auto; /* Center the container */
@@ -930,11 +951,11 @@ button[type="submit"]:hover {
           grid-template-columns: repeat(3, minmax(300px, 1fr)); /* Show 3 items per row */
         }
       }
-      
+
       @media screen and (min-width: 1500px) {
         #blogPosts {
           grid-template-columns: repeat(4, minmax(300px, 1fr)); /* Show 4 items per row */
         }
       }
       
-}
+}}
