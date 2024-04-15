@@ -223,9 +223,8 @@ p {
 }
 
 .index-container{
-  width: 100%;
+  width: 80%;
   margin: 0 auto; /* Center the container horizontally */
-  padding: 20px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -779,22 +778,23 @@ button[type="submit"]:hover {
       
 
 
-  @media (max-width: 899px) {
-    /* Hide all carousel content containers */
-    .carousel-content-container {
-      display: none;
-    }
-  
-    /* Show only the first carousel content container */
-    .carousel-content-container:nth-child(-n+2) {
-        display: block;
-      padding: 0;
-      margin:0;
-      }
-.carousel {
-    padding:0px;
-}
+@media (max-width: 1299px) {
+  /* Hide all carousel content containers */
+  .carousel-content-container {
+    display: none;
   }
+
+  /* Show only the first carousel content container */
+  .carousel-content-container:nth-child(-n+2) {
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+
+  .carousel {
+    padding: 0px;
+  }
+}
   
 @media (min-width: 900px) {
     .x-container {
@@ -866,8 +866,7 @@ button[type="submit"]:hover {
  .index-container{
   display: flex;
   justify-content: center; /* Center items horizontally */
-  max-width: 1000px; /* Limit maximum width */
-  margin: 0 auto; /* Center the container horizontally */
+
 }
 
 .carousel-content-container {
@@ -878,7 +877,6 @@ button[type="submit"]:hover {
   /* Adjust flex properties to show more content on wider screens */
   flex: 1; /* Equal distribution of space */
   max-width: calc(33.33%); /* Adjust width for each item */
-  margin: 0 10px; /* Add margin between items */
 }
    
     .about-image {
@@ -962,13 +960,12 @@ button[type="submit"]:hover {
         }
       }
     
-      @media screen and (min-width: 1200px) {
-        .carousel-content-container {
-            display: flex;
-          }
       @media screen and (min-width: 1400px) {
         #blogPosts {
           grid-template-columns: repeat(4, minmax(300px, 1fr)); /* Show 4 items per row */
+        }
+        .carousel-content-container {
+          display: flex;
         }
       }
       

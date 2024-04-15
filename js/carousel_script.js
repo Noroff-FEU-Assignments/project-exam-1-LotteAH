@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const arrowLeft = document.querySelector(".arrow-left");
     const arrowRight = document.querySelector(".arrow-right");
 
-    let currentIndex = 0;
+    let startIndex = 0;
+    const postsPerPage = 3; // Number of posts to display per page
     let posts = [];
 
     async function fetchPosts() {
@@ -41,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     async function displayPosts() {
         carouselContents.forEach(async (carouselContent, index) => {
-            const postIndex = (currentIndex + index) % posts.length;
+            const postIndex = (startIndex + index) % posts.length;
             const post = posts[postIndex];
             const featuredImageURL = await fetchFeaturedImage(post);
 
@@ -72,12 +73,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     arrowLeft.addEventListener("click", function () {
-        currentIndex = (currentIndex - 1 + posts.length) % posts.length;
+        startIndex = (startIndex - postsPerPage + posts.length) % posts.length;
         displayPosts();
     });
 
     arrowRight.addEventListener("click", function () {
-        currentIndex = (currentIndex + 1) % posts.length;
+        startIndex = (startIndex + postsPerPage) % posts.length;
         displayPosts();
     });
 
