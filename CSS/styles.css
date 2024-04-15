@@ -778,7 +778,7 @@ button[type="submit"]:hover {
       
 
 
-@media (max-width: 1299px) {
+@media (max-width: 1199px) {
   /* Hide all carousel content containers */
   .carousel-content-container {
     display: none;
@@ -863,33 +863,6 @@ button[type="submit"]:hover {
         justify-content: space-between;
     }
 
- .index-container{
-  display: flex;
-  justify-content: center; /* Center items horizontally */
-
-}
-
-.carousel-content-container {
-  display: flex; /* Display all carousel content containers */
-}
-
-.carousel-content-container:nth-child(-n+3) {
-  /* Adjust flex properties to show more content on wider screens */
-  flex: 1; /* Equal distribution of space */
-  max-width: calc(33.33%); /* Adjust width for each item */
-}
-   
-    .about-image {
-        max-height: 500px; /* Increase max height for the image */
-        width: 100%; /* Ensure image fills its container */
-        margin: 0; /* Remove margin */
-    }
-    .index-about {
-      display: grid;
-      grid-template-columns: 1fr 1fr; /* Two columns */
-      gap: 20px; /* Add gap between grid items */
-      max-width: 100%; /* Ensure it doesn't exceed parent's width */
-    }
 
     .blog-specific-container {
         flex-direction: row; /* Arrange sections horizontally on wider screens */
