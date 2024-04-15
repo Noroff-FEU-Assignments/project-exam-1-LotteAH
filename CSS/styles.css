@@ -221,50 +221,74 @@ p {
     max-width: 30%; 
     height: auto;
 }
-.index {
-    display: grid
-      grid-template-columns: 3fr /* Single column layout */
-      gap: 20px; /* Add gap between grid items */
-      }
 
-      .carousel-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-      }
+.index-container{
+  width: 100%;
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+}
+
+
+.index {
+  display: flex; /* Use Flexbox */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center text within the section */
+}
+
+
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin-left: auto; /* Add auto margin on the left */
+  margin-right: auto; /* Add auto margin on the right */
+  max-width: 100%; /* Ensure it doesn't exceed the container width */
+}
       
-      .carousel {
-        display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        align-items: flex-start; /* Align items to the start */
-        padding: 0 20px; /* Add padding to the carousel container */
-        grid-row: span 2; /* Span the carousel section across two rows */
-      }
+.carousel {
+  display: flex;
+  /* Remove overflow-x: auto; to prevent horizontal scrolling */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  align-items: center; /* Center items horizontally */
+  padding: 0 20px; /* Add padding to the carousel container */
+  margin-left: auto; /* Add auto margin on the left */
+  margin-right: auto; /* Add auto margin on the right */
+}
+
+.carousel-item {
+  flex: 0 0 calc(33.33% - 20px); /* Adjust width for larger screens */
+  max-width: none; /* Remove maximum width for larger screens */
+  text-decoration: none;
+  border-radius: 20px; /* Add rounded corners */
+  margin: 0 10px; /* Add margin between items */
+}
+
+.carousel-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden; /* Hide overflowing content */
+  border-radius: 20px; /* Add rounded corners */
+
+}
+
+/* Add styles for the carousel content container */
+.carousel-content-container {
+  display: flex;
+  scroll-snap-type: x mandatory;
+}
+
+
       
-      .carousel-item {
-        flex: 0 0 calc(33.33% - 20px); /* Adjust width for larger screens */
-        max-width: none; /* Remove maximum width for larger screens */
-        text-decoration: none;
-      }
-      
-      .carousel-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-decoration: none;
-      }
-      
-      /* Add styles for the carousel content container */
-      .carousel-content-container {
-        display: flex;
-        scroll-snap-type: x mandatory;
-      }
-      
-      /* Adjust styles for carousel item content */
-      .carousel-img {
+/* Adjust styles for carousel item content */
+.carousel-img {
         height: 300px;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
@@ -839,15 +863,23 @@ button[type="submit"]:hover {
         justify-content: space-between;
     }
 
-    .carousel-content-container {
-        display: none;
-      }
-      
-      .carousel-content-container:nth-child(-n+3) {
-        display: block;
-      padding: 0;
-      margin:0;
-      }
+ .index-container{
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  max-width: 1000px; /* Limit maximum width */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.carousel-content-container {
+  display: flex; /* Display all carousel content containers */
+}
+
+.carousel-content-container:nth-child(-n+3) {
+  /* Adjust flex properties to show more content on wider screens */
+  flex: 1; /* Equal distribution of space */
+  max-width: calc(33.33%); /* Adjust width for each item */
+  margin: 0 10px; /* Add margin between items */
+}
    
     .about-image {
         max-height: 500px; /* Increase max height for the image */
@@ -855,9 +887,12 @@ button[type="submit"]:hover {
         margin: 0; /* Remove margin */
     }
     .index-about {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-      }
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Two columns */
+      gap: 20px; /* Add gap between grid items */
+      max-width: 100%; /* Ensure it doesn't exceed parent's width */
+    }
+
     .blog-specific-container {
         flex-direction: row; /* Arrange sections horizontally on wider screens */
         /* Adjust width as needed */
