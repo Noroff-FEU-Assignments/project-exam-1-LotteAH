@@ -568,7 +568,7 @@ textarea[name="message"] {
     margin-bottom: 10px;
 }
 
-  .loader {
+.loader {
     border: 16px solid #f3f3f3;
     border-top: 16px solid #346734;
     border-radius: 50%;
@@ -618,21 +618,64 @@ button[type="submit"]:hover {
     margin-top: 20px; 
 }
 
-
-.post-wrapper h2 {
-    font-family: 'Open Sans';
-    font-size: 1.2em;
-    color: #333333;
-    font-weight: 800;
-    line-height: 1.5em; 
+.post-comments {
+  margin-top: 80px;
 }
-    
+/* Comments Section */
+#commentsContainer {
+  margin-top: 20px;
+}
+
+/* Comments Form */
+#commentForm {
+  margin-top: 20px;
+}
+
+/* Label Styles */
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Input and Textarea Styles */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  border: 2px solid #A8D48C;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+textarea {
+  resize: vertical; /* Allow vertical resizing of textarea */
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+  font-size: 1em;
+    padding: 10px 20px;
+    background-color: #669966;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 200px;
+    font-family: 'Open Sans';
+    font-weight: 600;
+}
+
+/* Hover effect */
+button[type="post"]:hover {
+  background-color: #346734;
+}
 
 .post-wrapper .post-excerpt {
     font-family: 'Open Sans';
     font-size: 1em;
     color: #333333;
-    padding-bottom: 20px;
+    padding-bottom: 20px; 
 }
     
 .post-wrapper {
