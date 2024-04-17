@@ -965,7 +965,7 @@ input[type="email"] {
       }
 
       
-      @media (min-width: 1200px) {
+@media (min-width: 1200px) {
         .index-about-content {
           display: flex;
           align-items: center;
