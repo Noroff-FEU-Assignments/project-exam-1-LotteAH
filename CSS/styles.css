@@ -898,8 +898,13 @@ main {
 
 .quote {
     width: 100%;
-    }
-    
+}
+
+input[type="text"],
+input[type="email"] {
+    width: calc(50% - 10px); /* Adjust the width as needed */
+}
+
 .footer {
     min-height: 100px;
     display: grid;
