@@ -940,8 +940,7 @@ main {
 input[type="text"],
 input[type="email"] {
     width: calc(50% - 10px); /* Adjust the width as needed */
-    }
-
+    }  
 .footer {
     min-height: 100px;
     display: grid;
@@ -965,7 +964,30 @@ input[type="email"] {
           grid-template-columns: repeat(3, minmax(300px, 1fr));
         }
       }
-    
+
+      
+      @media (min-width: 1200px) {
+        .index-about-content {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+        }
+      
+        .index-about-text {
+          flex-shrink: 0; /* Prevent shrinking */
+        }
+      
+        .index-centered-text {
+          flex-grow: 1; /* Take up remaining space */
+        }
+      
+        /* Optional: Adjust styles for the about text and image */
+        .index-about-image {
+          max-width: 80%;
+          height: auto;
+        }
+      }
+      
 @media screen and (min-width: 1400px) {
 
 #blogPosts {
