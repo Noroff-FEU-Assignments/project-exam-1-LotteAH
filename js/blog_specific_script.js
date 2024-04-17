@@ -31,11 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
   function displayBlogPost(post) {
     const blogTitleElement = document.getElementById('blogTitle');
     if (blogTitleElement) {
-      blogTitleElement.textContent = `Blog | ${post.title.rendered}`; // Update title text
+      blogTitleElement.textContent = `Blooms & Bounty | Blog | ${post.title.rendered}`; // Update title text
     }
 
     // Update document title
-    document.title = `Blog | ${post.title.rendered}`;
+    document.title = `Blooms & Bounty | Blog | ${post.title.rendered}`;
 
     const blogSpecificContainer = document.querySelector(".blog-specific-container");
 

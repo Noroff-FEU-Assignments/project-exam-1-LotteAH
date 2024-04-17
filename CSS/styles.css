@@ -380,7 +380,6 @@ p {
 .blogpost-content {
     display: flex;
     flex-direction: column;
-    align-items: left;
     margin: 0 10px;  
   }
 
