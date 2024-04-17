@@ -17,9 +17,17 @@ html, body {
     width: 100%;
 }
 
-main{
-    margin:20px;
-}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes up at least the viewport height */
+    margin: 0;
+  }
+  
+  main {
+    flex-grow: 1;
+    margin: 20px; /* Take up remaining vertical space */
+  }
 
 .main-container {
     display: flex;
@@ -43,6 +51,12 @@ main{
     padding: 20px;
     box-sizing: border-box;
 }
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 
 .top-header {
     height: 20%;
@@ -789,6 +803,19 @@ figcaption {
     align-items: center;
 }
 
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; 
+  }
+
+  .blog-title {
+    text-align: center; /* Center the text horizontally */
+    margin-top: 0; /* Remove any default margin */
+  }
+  
   .main-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -816,11 +843,21 @@ figcaption {
       gap: 20px;
       max-width: 1000px;
 }
-
+.ndex-about-image{
+    margin-top: 0px;
+}
 main section {
       width: 100%; 
 }
 
+.contact-container {
+    flex-direction: row;
+    align-items: flex-start; /* Align items at the start of the flex container */
+  }
+
+  .form-container {
+    margin-left: 60px;
+  }
 nav {
     display: flex;
     justify-content: center;
@@ -898,17 +935,18 @@ main {
 
 .quote {
     width: 100%;
-}
+    }
 
 input[type="text"],
 input[type="email"] {
     width: calc(50% - 10px); /* Adjust the width as needed */
-}
+    }
 
 .footer {
     min-height: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin-top: auto;
 }
 
 .footer-logo {
