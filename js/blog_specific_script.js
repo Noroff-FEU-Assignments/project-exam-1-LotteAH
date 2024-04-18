@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
       blogTitleElement.textContent = `Blooms & Bounty | Blog | ${post.title.rendered}`; // Update title text
     }
 
-    // Update document title
     document.title = `Blooms & Bounty | Blog | ${post.title.rendered}`;
 
     const blogSpecificContainer = document.querySelector(".blog-specific-container");
@@ -44,9 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="post-content">${post.content.rendered}</div>
     `;
 
-    // Check if _embedded property exists and featured media is available
     if (post._embedded && post._embedded["wp:featuredmedia"] && post._embedded["wp:featuredmedia"].length > 0) {
-      // Add images with click handlers to open modal
       postHTML += '<div class="image-container">';
       post._embedded["wp:featuredmedia"].forEach((media) => {
         const imageUrl = media.source_url;
@@ -55,10 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
       postHTML += '</div>';
     }
 
-    // Set inner HTML of blogSpecificContainer
     blogSpecificContainer.innerHTML = postHTML;
 
-    // Get all images within the post content and add click event listeners to open modal
     const images = blogSpecificContainer.querySelectorAll('.post-content img');
     images.forEach(image => {
       image.addEventListener('click', () => {
@@ -72,27 +67,25 @@ document.addEventListener("DOMContentLoaded", () => {
           console.error("Modal image not found");
           return;
         }
-        modalImg.src = image.src; // Set modal image source to clicked image source
-        modal.style.display = 'block'; // Show the modal
+        modalImg.src = image.src; 
+        modal.style.display = 'block';
       });
     });
 
-    // Close the modal when the close button is clicked
     const closeBtn = document.querySelector('.close');
     if (closeBtn) {
       closeBtn.addEventListener('click', () => {
         const modal = document.getElementById('imageModal');
         if (modal) {
-          modal.style.display = 'none'; // Hide the modal
+          modal.style.display = 'none';
         }
       });
     }
 
-    // Close the modal when clicking outside the modal content
     window.addEventListener('click', (event) => {
       const modal = document.getElementById('imageModal');
       if (modal && event.target === modal) {
-        modal.style.display = 'none'; // Hide the modal
+        modal.style.display = 'none';
       }
     });
   }

@@ -4,9 +4,9 @@ const resultsContainer = document.getElementById("blogPosts");
 const loadingIndicator = document.querySelector(".loader");
 const postUrl = "http://blooms-and-bounty.local/wp-json/wp/v2/posts";
 const mediaUrl = "http://blooms-and-bounty.local/wp-json/wp/v2/media";
-let currentPage = 1; // Track the current page
-let totalPosts = 0; // Track the total number of posts
-const postsPerPage = 10; // Number of posts to load per page
+let currentPage = 1; 
+let totalPosts = 0; 
+const postsPerPage = 10; 
 
 async function getBlogPosts() {
   try {
@@ -18,7 +18,7 @@ async function getBlogPosts() {
     }
 
     const totalCount = response.headers.get("X-WP-Total");
-    totalPosts = parseInt(totalCount); // Total number of posts
+    totalPosts = parseInt(totalCount);
 
     const posts = await response.json();
 
@@ -32,8 +32,8 @@ async function getBlogPosts() {
 
     const errorMessage = document.createElement("div");
     errorMessage.textContent = "An error occurred. Please try again later.";
-    errorMessage.classList.add("error-message"); // Apply the error-message class
-    errorMessage.style.color = "red"; // Optional inline style for color
+    errorMessage.classList.add("error-message");
+    errorMessage.style.color = "red";
 
     resultsContainer.innerHTML = "";
     resultsContainer.appendChild(errorMessage);
@@ -46,7 +46,6 @@ function displayPosts(posts) {
     const featuredMediaId = post.featured_media;
     let featuredMediaUrl = "";
 
-    // Fetch the details of the featured image
     if (featuredMediaId) {
       fetch(`${mediaUrl}/${featuredMediaId}`)
         .then(mediaResponse => mediaResponse.json())
@@ -91,7 +90,7 @@ async function loadMorePosts() {
     }
 
     const posts = await response.json();
-    currentPage++; // Increment the current page after fetching new posts
+    currentPage++;
 
     hideLoadingIndicator();
 
@@ -102,7 +101,6 @@ async function loadMorePosts() {
 
     displayPosts(posts);
 
-    // Check if total posts loaded so far >= total posts available
     if ((currentPage * postsPerPage) >= totalPosts) {
       removeLoadMoreButton();
     }

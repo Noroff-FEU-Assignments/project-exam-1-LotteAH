@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const thankYouMessage = document.getElementById('thankYouMessage');
   
     async function fetchComments(postId) {
-      // Your existing code for fetching and displaying comments
     }
   
     const commentForm = document.getElementById('commentForm');
@@ -24,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Basic ${auth}` // Include basic auth header
+            'Authorization': `Basic ${auth}`
           },
           body: JSON.stringify({
             post: postId,
@@ -38,17 +37,14 @@ document.addEventListener("DOMContentLoaded", () => {
           throw new Error(`Failed to post comment. Status: ${response.status}`);
         }
   
-        // Clear form after successful submission
         commentForm.reset();
   
-        // Show "thank you" message
         thankYouMessage.style.display = 'block';
       } catch (error) {
         console.error("Error posting comment:", error);
       }
     });
   
-    // Fetch and display comments initially
     const postId = new URLSearchParams(window.location.search).get('id');
     if (postId) {
       fetchComments(postId);

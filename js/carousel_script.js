@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const arrowRight = document.querySelector(".arrow-right");
 
     let startIndex = 0;
-    const postsPerPage = 3; // Number of posts to display per page
+    const postsPerPage = 3;
     let posts = [];
 
     async function fetchPosts() {
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 postLink.appendChild(image);
                 postLink.appendChild(textContainer);
 
-                carouselItem.innerHTML = ""; // Clear existing content
+                carouselItem.innerHTML = "";
                 carouselItem.appendChild(postLink);
             } else {
                 carouselItem.innerHTML = "Featured image not available";
