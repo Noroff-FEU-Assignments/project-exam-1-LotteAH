@@ -451,6 +451,7 @@ p {
 .thankyou {
     margin-top: 40px;
 }
+
 .blog-img {
     max-width: 100%; 
     height: auto;
@@ -638,23 +639,20 @@ button[type="submit"]:hover {
 .post-comments {
   margin-top: 80px;
 }
-/* Comments Section */
+
 #commentsContainer {
   margin-top: 20px;
 }
 
-/* Comments Form */
 #commentForm {
   margin-top: 20px;
 }
 
-/* Label Styles */
 label {
   display: block;
   margin-bottom: 5px;
 }
 
-/* Input and Textarea Styles */
 input[type="text"],
 input[type="email"],
 textarea {
@@ -666,7 +664,7 @@ textarea {
 }
 
 textarea {
-  resize: vertical; /* Allow vertical resizing of textarea */
+  resize: vertical; 
 }
 
 button[type="submit"] {
@@ -683,7 +681,6 @@ button[type="submit"] {
     font-weight: 600;
 }
 
-/* Hover effect */
 button[type="post"]:hover {
   background-color: #346734;
 }
@@ -814,8 +811,8 @@ main {
   }
 
   .blog-title {
-    text-align: center; /* Center the text horizontally */
-    margin-top: 0; /* Remove any default margin */
+    text-align: center; 
+    margin-top: 0; 
   }
   
   .main-container {
@@ -829,7 +826,7 @@ main {
     grid-column: span 2;
     text-align: left; 
     margin-bottom: 20px; 
-  }
+}
   
 #blogPosts {
     grid-template-columns: repeat(2, minmax(300px, 1fr)); 
@@ -845,22 +842,25 @@ main {
       gap: 20px;
       max-width: 1000px;
 }
-.ndex-about-image{
+
+.index-about-image{
     margin-top: 0px;
 }
+
 main section {
       width: 100%; 
 }
 
 .contact-container {
     flex-direction: row;
-    align-items: flex-start; /* Align items at the start of the flex container */
+    align-items: flex-start;
   }
 
-  .form-container {
+.form-container {
     margin-left: 60px;
-  }
-nav {
+}
+
+  nav {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -927,22 +927,23 @@ main {
     border-top-left-radius: 0px;
     border-bottom-left-radius:0px;
     border-top-right-radius: 20px;     
-  }
+}
     
 .section-flex {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0;
-  }
+}
 
 .quote {
     width: 100%;
-    }
+}
 
 input[type="text"],
 input[type="email"] {
-    width: calc(50% - 10px); /* Adjust the width as needed */
+    width: calc(50% - 10px);
     }  
+
 .footer {
     min-height: 100px;
     display: grid;
@@ -960,46 +961,45 @@ input[type="email"] {
     padding-top: 65px;
 }
 }
+
 @media screen and (min-width: 1000px) {
 
 #blogPosts {
-          grid-template-columns: repeat(3, minmax(300px, 1fr));
-        }
-      }
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+}
+}
 
       
 @media (min-width: 1200px) {
-        .index-about-content {
-          display: flex;
-          align-items: center;
-          gap: 20px;
-        }
+    .index-about-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
       
-        .index-about-text {
-          flex-shrink: 0; /* Prevent shrinking */
-        }
+.index-about-text {
+    flex-shrink: 0; 
+}
       
-        .index-centered-text {
-          flex-grow: 1; /* Take up remaining space */
-        }
+.index-centered-text {
+    flex-grow: 1;
+}
       
-        /* Optional: Adjust styles for the about text and image */
-        .index-about-image {
-          max-width: 80%;
-          height: auto;
-        }
-      }
+       
+.index-about-image {
+    max-width: 70%;
+    height: auto;
+}
+}
       
 @media screen and (min-width: 1400px) {
 
 #blogPosts {
-          grid-template-columns: repeat(4, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, minmax(300px, 1fr));
 }
 
 .carousel-content-container {
-          display: flex;
-        }
-      }
-      
+    display: flex;
+}
 }
 
