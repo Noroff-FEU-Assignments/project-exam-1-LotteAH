@@ -449,6 +449,9 @@ p {
     flex-direction: column; 
 }
 
+.thankyou {
+    margin-top: 40px;
+}
 .blog-img {
     max-width: 100%; 
     height: auto;
