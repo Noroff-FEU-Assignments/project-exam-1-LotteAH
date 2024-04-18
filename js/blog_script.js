@@ -32,7 +32,8 @@ async function getBlogPosts() {
 
     const errorMessage = document.createElement("div");
     errorMessage.textContent = "An error occurred. Please try again later.";
-    errorMessage.classList.add("error-message");
+    errorMessage.classList.add("error-message"); // Apply the error-message class
+    errorMessage.style.color = "red"; // Optional inline style for color
 
     resultsContainer.innerHTML = "";
     resultsContainer.appendChild(errorMessage);
