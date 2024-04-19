@@ -319,12 +319,19 @@ p {
   margin-bottom: 20px; 
 }
   
-.index-about-image {
-  max-width: 70%;
+.contact-about-image {
+  max-width: 80%;
   border-radius: 50%;
   border: 0.5em solid #A8D48C;
   margin-top: 40px;
 }
+
+.index-about-image {
+    max-width: 70%;
+    border-radius: 50%;
+    border: 0.5em solid #A8D48C;
+    margin-top: 40px;
+  }
   
 .index-centered-text {
     max-width: 100%;
@@ -843,6 +850,9 @@ main {
       max-width: 1000px;
 }
 
+.contact-about-image{
+    margin-top: 0px;
+}
 .index-about-image{
     margin-top: 0px;
 }
@@ -980,15 +990,19 @@ input[type="email"] {
 .index-about-text {
     flex-shrink: 0; 
 }
-      
+
 .index-centered-text {
     flex-grow: 1;
 }
       
-       
-.index-about-image {
+.contact-about-image {
     max-width: 60%;
     height: auto;
+}       
+.index-about-image {
+    max-width: 80%;
+    height: auto;
+    margin-top: 40px;
 }
 }
       
