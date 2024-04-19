@@ -2,8 +2,8 @@ import { showLoadingIndicator, hideLoadingIndicator } from "./indicator.js";
 
 const resultsContainer = document.getElementById("blogPosts");
 const loadingIndicator = document.querySelector(".loader");
-const postUrl = "http://blooms-and-bounty.local/wp-json/wp/v2/posts";
-const mediaUrl = "http://blooms-and-bounty.local/wp-json/wp/v2/media";
+const postUrl = "https://aasholtstudio.com/wp-json/wp/v2/posts";
+const mediaUrl = "https://aasholtstudio.com/wp-json/wp/v2/media";
 let currentPage = 1; 
 let totalPosts = 0; 
 const postsPerPage = 10; 

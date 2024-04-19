@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     async function fetchPosts() {
         try {
-            const response = await fetch("http://blooms-and-bounty.local/wp-json/wp/v2/posts");
+            const response = await fetch("https://aasholtstudio.com/wp-json/wp/v2/posts");
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
             let featuredMediaUrl = "";
 
             if (featuredMediaId) {
-                const mediaResponse = await fetch(`http://blooms-and-bounty.local/wp-json/wp/v2/media/${featuredMediaId}`);
+                const mediaResponse = await fetch(`https://aasholtstudio.com/wp-json/wp/v2/media/${featuredMediaId}`);
                 if (mediaResponse.ok) {
                     const mediaData = await mediaResponse.json();
                     featuredMediaUrl = mediaData.source_url;

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const commentsUrl = "http://blooms-and-bounty.local/wp-json/wp/v2/comments/";
+    const commentsUrl = "https://aasholtstudio.com/wp-json/wp/v2/comments/";
     const thankYouMessage = document.getElementById('thankYouMessage');
   
     async function fetchComments(postId) {

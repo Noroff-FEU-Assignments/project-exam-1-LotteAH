@@ -1,7 +1,7 @@
 import { showLoadingIndicator, hideLoadingIndicator } from "./indicator.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const postUrl = "http://blooms-and-bounty.local/wp-json/wp/v2/posts/";
+  const postUrl = "https://aasholtstudio.com/wp-json/wp/v2/posts/";
 
   async function getBlogPost() {
     try {
