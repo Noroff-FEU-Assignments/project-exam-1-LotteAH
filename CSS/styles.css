@@ -22,19 +22,19 @@ body {
     flex-direction: column;
     min-height: 100vh; /* Ensure body takes up at least the viewport height */
     margin: 0;
-  }
+}
   
-  main {
+main {
     flex-grow: 1;
     margin: 20px; /* Take up remaining vertical space */
-  }
+}
 
 .main-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: center;
-  }
+}
 
 .x-container {
     max-width: 1400px;
@@ -327,7 +327,7 @@ p {
 }
 
 .index-about-image {
-    max-width: 70%;
+    max-width: 80%;
     border-radius: 50%;
     border: 0.5em solid #A8D48C;
     margin-top: 40px;
