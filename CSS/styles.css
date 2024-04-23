@@ -212,13 +212,19 @@ p {
 .centered-text {
     text-align: center;
 }
-
-.sucess-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.sucess-image {
+    width: 80%;
+    border-radius: 50%;
+    border: 0.5em solid #A8D48C;
 }
+.success-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 
 .leaves-container {
     display: flex;
@@ -786,30 +792,30 @@ figcaption {
 }
       
 @media (max-width: 768px) {
-    #imageModal {
-        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
-        display: none;
-        position: fixed;
-        z-index: 1000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto; /* Allow modal content to be scrolled */
-      }
-    
-      .modal-content {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 90%; /* Adjusted width for smaller screens */
-        max-width: 90%; /* Maximum width for the modal */
-        padding: 20px;
-        background-color: #fff;
-        text-align: center;
-        overflow-y: auto; /* Allow vertical scrolling within modal content */
-      }
+     #imageModal {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Allow modal content to be scrolled */
+  }
+
+  .modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%; /* Adjusted width for smaller screens */
+    max-width: 90%; /* Maximum width for the modal */
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+    overflow-y: auto; /* Allow vertical scrolling within modal content */
+  }
     .arrow-left img,
     .arrow-right img {
       width: 20px; /* Adjust the width as needed */
@@ -881,7 +887,10 @@ main {
     text-align: left; 
     margin-bottom: 20px; 
 }
-  
+.success-wrapper {
+    grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+} 
+
 #blogPosts {
     grid-template-columns: repeat(2, minmax(300px, 1fr)); 
 }
@@ -1020,6 +1029,8 @@ input[type="email"] {
     justify-content: right;
     padding-top: 65px;
 }
+
+
 }
 
 @media screen and (min-width: 1000px) {
