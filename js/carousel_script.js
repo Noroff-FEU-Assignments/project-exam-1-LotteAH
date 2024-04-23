@@ -85,44 +85,47 @@ document.addEventListener("DOMContentLoaded", function () {
     // Touch event handling for swipe gestures
     let startX = null;
     let startY = null;
-    carouselContents.forEach((carouselContent) => {
-        carouselContent.addEventListener("touchstart", (e) => {
-            startX = e.touches[0].clientX;
-            startY = e.touches[0].clientY;
-        });
+    let swipeThreshold = 50; // Adjust this threshold as needed
+    let touchStartX = null;
 
-        carouselContent.addEventListener("touchmove", (e) => {
-            if (startX === null || startY === null) {
-                return;
+    document.querySelector(".carousel-container").addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        touchStartX = startX;
+    });
+
+    document.querySelector(".carousel-container").addEventListener("touchmove", (e) => {
+        if (startX === null || startY === null) {
+            return;
+        }
+
+        const diffX = e.touches[0].clientX - startX;
+        const diffY = e.touches[0].clientY - startY;
+
+        if (Math.abs(diffX) > Math.abs(diffY)) {
+            e.preventDefault(); // Prevent vertical scrolling
+        }
+    });
+
+    document.querySelector(".carousel-container").addEventListener("touchend", (e) => {
+        if (startX === null || startY === null) {
+            return;
+        }
+
+        const diffX = e.changedTouches[0].clientX - touchStartX;
+
+        if (Math.abs(diffX) > swipeThreshold) {
+            if (diffX > 0) {
+                startIndex = (startIndex - postsPerPage + posts.length) % posts.length;
+            } else {
+                startIndex = (startIndex + postsPerPage) % posts.length;
             }
+            displayPosts();
+        }
 
-            const diffX = e.touches[0].clientX - startX;
-            const diffY = e.touches[0].clientY - startY;
-
-            if (Math.abs(diffX) > Math.abs(diffY)) {
-                e.preventDefault(); // Prevent vertical scrolling
-            }
-        });
-
-        carouselContent.addEventListener("touchend", (e) => {
-            if (startX === null || startY === null) {
-                return;
-            }
-
-            const diffX = e.changedTouches[0].clientX - startX;
-
-            if (Math.abs(diffX) > 50) {
-                if (diffX > 0) {
-                    startIndex = (startIndex - postsPerPage + posts.length) % posts.length;
-                } else {
-                    startIndex = (startIndex + postsPerPage) % posts.length;
-                }
-                displayPosts();
-            }
-
-            startX = null;
-            startY = null;
-        });
+        startX = null;
+        startY = null;
+        touchStartX = null;
     });
 
     fetchPosts();
