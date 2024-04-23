@@ -877,6 +877,10 @@ figcaption {
         flex-direction: column;
         align-items: center;
     }
+
+    .carousel-content-container:hover .carousel-item {
+        transform: none; /* Remove the transform effect on hover */
+    }
 }
   
 @media (min-width: 900px) {
