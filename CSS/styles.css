@@ -408,10 +408,7 @@ p {
   .blogpost-container:hover {
     transform: scale(1.05); /* Scale up by 10% */
   }
-  .post-title {
-    font-weight: normal; /* Remove bold styling */
-  }
-  
+
 .blog-section .mini-post-container {
     display: flex;
     flex-direction: column;
@@ -450,9 +447,17 @@ p {
     background-color: rgba(0, 0, 0, 0.7);
 }
   
+.post-title {
+    font-weight: normal; /* Remove bold styling */
+    font-family: 'Open Sans', sans-serif; /* Specify the font family */
+    font-stretch: condensed; /* Make the font narrower */
+    font-weight: 100; /* Set a lighter font weight for thinner appearance */
+    color: #333333; /* Set the color to gray */
+    text-decoration: none; /* Remove underline */
+    transition: font-weight 0.2s; /* Add transition for smooth hover effect */
+  }
 
 .blog-title {
-    font-family: 'Open Sans';
     font-size: 1.2em; 
     color: #333; 
     text-align: center;
@@ -461,13 +466,13 @@ p {
     text-transform: none;
 } 
 .breadcrumb a {
-    font-family: 'Open Sans';
-    font-weight: 100;
+    font-family: 'Open Sans', sans-serif; /* Specify the font family */
+    font-stretch: condensed; /* Make the font narrower */
+    font-weight: 100; /* Set a lighter font weight for thinner appearance */
     color: #333333; /* Set the color to gray */
     text-decoration: none; /* Remove underline */
-    font-weight: normal; /* Set initial font weight */
     transition: font-weight 0.2s; /* Add transition for smooth hover effect */
-}
+  }
 
 .breadcrumb a:hover {
     font-weight: bold; /* Set font weight to bold on hover */
