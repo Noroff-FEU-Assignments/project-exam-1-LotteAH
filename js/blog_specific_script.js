@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (blogTitleElement) {
       // Update breadcrumb with clickable links and classes
       blogTitleElement.innerHTML = `
-        <a href="index.html">Blooms & Bounty | Home |</a>
+        <a href="index.html">Blooms & Bounty |</a>
         <a href="blog.html"> Blog |</a>
         <span class="post-title">${post.title.rendered}</span>
       `;
