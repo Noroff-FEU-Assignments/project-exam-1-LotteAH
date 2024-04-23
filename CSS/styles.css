@@ -33,7 +33,7 @@ main {
 .clickable-item {
     cursor: pointer;
   }
-  
+
 .main-container {
     display: flex;
     flex-direction: column;
@@ -449,15 +449,26 @@ p {
   
 
 .blog-title {
+    font-family: 'Open Sans';
     font-size: 1.2em; 
-    font-weight: 100;
     color: #333; 
     text-align: center;
     padding-top: 20px;
     margin-bottom: 40px;
     text-transform: none;
 } 
+.breadcrumb a {
+    font-family: 'Open Sans';
+    font-weight: 100;
+    color: #333333; /* Set the color to gray */
+    text-decoration: none; /* Remove underline */
+    font-weight: normal; /* Set initial font weight */
+    transition: font-weight 0.2s; /* Add transition for smooth hover effect */
+}
 
+.breadcrumb a:hover {
+    font-weight: bold; /* Set font weight to bold on hover */
+}
 .image-container {
     display: flex;
     flex-wrap: wrap;
