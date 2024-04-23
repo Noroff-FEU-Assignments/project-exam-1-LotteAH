@@ -805,16 +805,8 @@ figcaption {
   }
 
   .modal-content {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%; /* Adjusted width for smaller screens */
-    max-width: 90%; /* Maximum width for the modal */
-    padding: 20px;
-    background-color: #fff;
-    text-align: center;
-    overflow-y: auto; /* Allow vertical scrolling within modal content */
+    max-width: 95%; /* Adjust width for smaller screens */
+    max-height: 80vh; /* Adjust height for smaller screens */
   }
     .arrow-left img,
     .arrow-right img {
