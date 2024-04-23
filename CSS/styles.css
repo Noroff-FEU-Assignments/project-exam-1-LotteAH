@@ -405,7 +405,7 @@ p {
     margin: 0 10px;  
   }
 
-  .blogpost-container:hover {
+.blogpost-container:hover {
     transform: scale(1.05); /* Scale up by 10% */
   }
 
@@ -849,7 +849,7 @@ figcaption {
 
 
 
-@media (max-width: 1199px) {
+@media (max-width: 999px) {
     .carousel-content-container {
         display: none;
     }
@@ -1064,8 +1064,27 @@ input[type="email"] {
 }
 }
 
-      
-@media (min-width: 1200px) {
+
+@media (min-width: 1000px) and (max-width: 1399px) {
+    /* Hide all carousel content containers */
+    .carousel-content-container {
+        display: none;
+    }
+
+    /* Show the first three carousel content containers */
+    .carousel-content-container:nth-child(-n+3) {
+        display: flex;
+        padding: 0;
+        margin: 0;
+    }
+
+    .carousel {
+        padding: 0px;
+    }
+}
+  
+  
+@media (min-width: 1400px) {
     .index-about-content {
     display: flex;
     align-items: center;
@@ -1089,9 +1108,6 @@ input[type="email"] {
     height: auto;
     margin-top: 40px;
 }
-}
-      
-@media screen and (min-width: 1400px) {
 
 #blogPosts {
     grid-template-columns: repeat(4, minmax(300px, 1fr));
@@ -1099,6 +1115,8 @@ input[type="email"] {
 
 .carousel-content-container {
     display: flex;
-}
+    /* Flexbox properties can be added here */
+    flex-wrap: wrap; /* Example flexbox property */
+  }
 }
 
