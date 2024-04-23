@@ -844,12 +844,12 @@ main {
     justify-content: space-between; 
   }
 
-  .blog-title {
+.blog-title {
     text-align: center; 
     margin-top: 0; 
   }
   
-  .main-container {
+.main-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -939,6 +939,9 @@ main {
     margin: 0;
 }
 
+.index-about-content {
+width: 80%;
+}
 .about_img_2 {
     display: flex;
     align-content: center;
