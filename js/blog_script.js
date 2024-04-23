@@ -53,7 +53,7 @@ function displayPosts(posts) {
           featuredMediaUrl = mediaData.source_url;
 
           const postContainer = document.createElement("div");
-          postContainer.classList.add("blogpost-container");
+          postContainer.classList.add("blogpost-container", "clickable-item");
 
           const postHTML = `
             <section class="blogpost" data-id="${post.id}">

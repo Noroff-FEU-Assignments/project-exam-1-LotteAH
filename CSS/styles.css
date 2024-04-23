@@ -30,6 +30,10 @@ main {
     margin: 20px; /* Take up remaining vertical space */
 }
 
+.clickable-item {
+    cursor: pointer;
+  }
+  
 .main-container {
     display: flex;
     flex-direction: column;
@@ -312,7 +316,11 @@ p {
   background-color: rgba(168, 212, 140, 0.25);
   text-decoration: none;
 }
-      
+
+.carousel-content-container:hover .carousel-item {
+    transform: scale(1.1);
+  }
+  
 .index-about {
   display: flex;
   flex-direction: column;
@@ -395,6 +403,10 @@ p {
     display: flex;
     flex-direction: column;
     margin: 0 10px;  
+  }
+
+  .blogpost-container:hover {
+    transform: scale(1.05); /* Scale up by 10% */
   }
 
 .blog-section .mini-post-container {
