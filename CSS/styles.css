@@ -784,20 +784,25 @@ figcaption {
 .load-more-btn:hover {
     background-color: #346734;
 }
-      
-@media (max-width: 768px) {
-    .modal-content {
-        width: 90%;
-        max-width: 90%;
-    }
-}
-
 @media (max-width: 576px) {
     .modal-content {
         width: 90%;
         max-width: 100%;
     }
 }
+      
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+        max-width: 90%;
+    }
+    .arrow-left,
+  .arrow-right {
+    display: none; /* Hide arrows on smaller screens */
+  }
+}
+
+
 
 @media (max-width: 1199px) {
     .carousel-content-container {
