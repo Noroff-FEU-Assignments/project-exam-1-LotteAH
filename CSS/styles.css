@@ -796,10 +796,11 @@ figcaption {
         width: 90%;
         max-width: 90%;
     }
-    .arrow-left,
-  .arrow-right {
-    display: none; /* Hide arrows on smaller screens */
-  }
+    .arrow-left img,
+    .arrow-right img {
+      width: 20px; /* Adjust the width as needed */
+      height: 30px; /* Adjust the height proportionally */
+    }
 }
 
 
