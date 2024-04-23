@@ -784,18 +784,6 @@ figcaption {
 .load-more-btn:hover {
     background-color: #346734;
 }
-
-@media (max-width: 576px) {
-    .modal-content {
-      width: 90%; /* Adjusted width for smaller screens */
-      max-width: 100%; /* Ensure modal fits within the viewport */
-      margin: 20px auto; /* Center the modal horizontally */
-    }
-  
-    #imageModal {
-      display: block; /* Show the modal */
-    }
-  }
       
 @media (max-width: 768px) {
     .modal-content {

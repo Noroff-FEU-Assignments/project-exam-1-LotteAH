@@ -56,7 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const images = blogSpecificContainer.querySelectorAll('.post-content img');
     images.forEach(image => {
-      image.addEventListener('click', () => {
+      image.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent the default behavior of the anchor link
         const modal = document.getElementById('imageModal');
         if (!modal) {
           console.error("Modal not found");
