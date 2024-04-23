@@ -15,6 +15,7 @@ a {
 html, body {
     font-family: "OpenSans", Verdana, Geneva, Tahoma, sans-serif;
     width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 body {
@@ -37,7 +38,7 @@ main {
 }
 
 .x-container {
-    max-width: 1400px;
+    max-width: 100%; /* Adjusted to 100% */
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
@@ -233,13 +234,13 @@ p {
     height: auto;
 }
 
-.index-container{
-  width: 80%;
-  margin: 0 auto;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.index-container {
+    width: 100%; /* Adjusted to 100% */
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .index {
@@ -786,20 +787,33 @@ figcaption {
 
 
 @media (max-width: 1199px) {
-  
-.carousel-content-container {
-    display: none;
-}
+    .carousel-content-container {
+        display: none;
+    }
 
-.carousel-content-container:nth-child(-n+2) {
-    display: block;
-    padding: 0;
-    margin: 0;
-}
+    .carousel-content-container:nth-child(-n+2) {
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
 
-  .carousel {
-    padding: 0px;
-}
+    .carousel {
+        padding: 0px;
+    }
+
+    .x-container {
+        margin: 0; /* Update to remove margin on smaller devices */
+    }
+
+    .index-container {
+        width: 100%; /* Adjusted to 100% */
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
   
 @media (min-width: 900px) {
