@@ -790,17 +790,6 @@ figcaption {
       width: 90%; /* Adjusted width for smaller screens */
       max-width: 100%; /* Ensure modal fits within the viewport */
       margin: 20px auto; /* Center the modal horizontally */
-      padding: 20px; /* Add padding for better spacing */
-      background-color: #fff; /* Set background color */
-      text-align: center; /* Center text within modal */
-      overflow-y: auto; /* Enable vertical scrolling if content exceeds viewport */
-      border-radius: 10px; /* Add border radius for a rounded look */
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
-      position: fixed; /* Fixed position to ensure it stays in view */
-      top: 50%; /* Position modal at the center vertically */
-      left: 50%; /* Position modal at the center horizontally */
-      transform: translate(-50%, -50%); /* Center the modal precisely */
-      z-index: 1001; /* Ensure modal appears above other content */
     }
   
     #imageModal {
