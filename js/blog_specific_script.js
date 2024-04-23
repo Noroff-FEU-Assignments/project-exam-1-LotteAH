@@ -58,7 +58,6 @@ document.addEventListener("DOMContentLoaded", () => {
     images.forEach(image => {
       // Handle both click and touch events for opening the modal
       image.addEventListener('click', openModal);
-      image.addEventListener('touchstart', openModal);
     });
 
     const closeBtn = document.querySelector('.close');
