@@ -56,39 +56,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const images = blogSpecificContainer.querySelectorAll('.post-content img');
     images.forEach(image => {
-      image.addEventListener('click', (event) => {
-        event.preventDefault(); // Prevent the default behavior of the anchor link
-        const modal = document.getElementById('imageModal');
-        if (!modal) {
-          console.error("Modal not found");
-          return;
-        }
-        const modalImg = modal.querySelector('.modal-content');
-        if (!modalImg) {
-          console.error("Modal image not found");
-          return;
-        }
-        modalImg.src = image.src; 
-        modal.style.display = 'block';
-      });
+      // Handle both click and touch events for opening the modal
+      image.addEventListener('click', openModal);
+      image.addEventListener('touchstart', openModal);
     });
 
     const closeBtn = document.querySelector('.close');
     if (closeBtn) {
-      closeBtn.addEventListener('click', () => {
-        const modal = document.getElementById('imageModal');
-        if (modal) {
-          modal.style.display = 'none';
-        }
-      });
+      closeBtn.addEventListener('click', closeModal);
     }
 
-    window.addEventListener('click', (event) => {
-      const modal = document.getElementById('imageModal');
-      if (modal && event.target === modal) {
-        modal.style.display = 'none';
-      }
-    });
+    window.addEventListener('click', outsideModalClick);
+  }
+
+  function openModal(event) {
+    event.preventDefault(); // Prevent the default behavior of the anchor link
+    const modal = document.getElementById('imageModal');
+    if (!modal) {
+      console.error("Modal not found");
+      return;
+    }
+    const modalImg = modal.querySelector('.modal-content');
+    if (!modalImg) {
+      console.error("Modal image not found");
+      return;
+    }
+    modalImg.src = this.src; // 'this' refers to the clicked image
+    modal.style.display = 'block';
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('imageModal');
+    if (modal) {
+      modal.style.display = 'none';
+    }
+  }
+
+  function outsideModalClick(event) {
+    const modal = document.getElementById('imageModal');
+    if (modal && event.target === modal) {
+      modal.style.display = 'none';
+    }
   }
 
   getBlogPost();
