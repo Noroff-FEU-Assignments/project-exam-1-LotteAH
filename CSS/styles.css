@@ -1069,7 +1069,7 @@ input[type="email"] {
 }
 
 
-@media (min-width: 900px) and (max-width: 1399px) {
+@media (min-width: 900px) and (max-width: 1299px) {
     /* Hide all carousel content containers */
     .carousel-content-container {
         display: none;
@@ -1088,7 +1088,7 @@ input[type="email"] {
 }
   
   
-@media (min-width: 1400px) {
+@media (min-width: 1300px) {
     .index-about-content {
     display: flex;
     align-items: center;
