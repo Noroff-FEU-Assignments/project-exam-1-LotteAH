@@ -408,7 +408,10 @@ p {
   .blogpost-container:hover {
     transform: scale(1.05); /* Scale up by 10% */
   }
-
+  .post-title {
+    font-weight: normal; /* Remove bold styling */
+  }
+  
 .blog-section .mini-post-container {
     display: flex;
     flex-direction: column;

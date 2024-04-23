@@ -31,7 +31,12 @@ document.addEventListener("DOMContentLoaded", () => {
   function displayBlogPost(post) {
     const blogTitleElement = document.getElementById('blogTitle');
     if (blogTitleElement) {
-      blogTitleElement.textContent = `Blooms & Bounty | Blog | ${post.title.rendered}`; // Update title text
+      // Update breadcrumb with clickable links and classes
+      blogTitleElement.innerHTML = `
+        <a href="index.html">Blooms & Bounty</a> |
+        <a href="blog.html"> Blog</a> |
+        <span class="post-title">${post.title.rendered}</span>
+      `;
     }
 
     document.title = `Blooms & Bounty | Blog | ${post.title.rendered}`;
