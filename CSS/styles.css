@@ -407,23 +407,23 @@ p {
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.7);
 }
-  
+
 .modal-content {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 90%;
-    max-height: 90%;
+    width: 90%;
+    max-width: 600px; /* Adjust as needed */
     padding: 20px;
-    background-color: #fff; 
-    text-align: center; 
+    background-color: #fff;
+    text-align: center;
 }
-  
+
 #modalImage {
-    max-width: 100%; 
-    max-height: 100%; 
-    height: auto; 
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
     display: block;
     margin: 0 auto;
 }
@@ -784,7 +784,19 @@ figcaption {
     background-color: #346734;
 }
       
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+        max-width: 90%;
+    }
+}
 
+@media (max-width: 576px) {
+    .modal-content {
+        width: 90%;
+        max-width: 100%;
+    }
+}
 
 @media (max-width: 1199px) {
     .carousel-content-container {
