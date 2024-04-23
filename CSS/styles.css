@@ -792,22 +792,23 @@ figcaption {
 }
       
 @media (max-width: 768px) {
-     #imageModal {
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto; /* Allow modal content to be scrolled */
-  }
-
-  .modal-content {
-    max-width: 95%; /* Adjust width for smaller screens */
-    max-height: 80vh; /* Adjust height for smaller screens */
-  }
+    .modal {
+        display: block;
+      }
+    
+      .modal-content {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%; /* Adjusted width for smaller screens */
+        max-width: calc(100% - 40px); /* Adjusted max-width for modal content */
+        padding: 20px;
+        background-color: #fff;
+        text-align: center;
+        overflow-y: auto; /* Allow vertical scrolling within modal */
+      }
+    
     .arrow-left img,
     .arrow-right img {
       width: 20px; /* Adjust the width as needed */
