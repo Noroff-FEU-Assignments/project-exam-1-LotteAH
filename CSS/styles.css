@@ -78,13 +78,13 @@ main {
 }
 
 .bottom-header {
-    background-color: #A8D48C;
+    background-color: #a8d48c;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60px;
     position: relative;
-}
+  }
 
 nav,
 #menu-checkbox {
@@ -106,6 +106,7 @@ font-weight: 600;
 .hamburger {
     width: 40px;
     height: auto;
+    padding-top:7px;
 }
 
 nav {
@@ -213,6 +214,34 @@ p {
     padding-bottom: 20px;   
 }
 
+/* Style for the back to top button */
+#backToTopBtn {
+    display: none; /* Initially hidden */
+    font-family: 'Open Sans';
+    font-weight: 900;
+    font-size: 1.8em; /* Adjust the font size for the symbol */
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* 20px from the bottom */
+    right: 30px; /* 30px from the right */
+    z-index: 99; /* Ensure it's above other elements */
+    border: none;
+    outline: none;
+    background-color: #669966; /* Button background color */
+    color: white; /* Text color */
+    cursor: pointer;
+    width: 50px; /* Adjust the width for the wider symbol */
+    height: 50px; /* Adjust the height accordingly */
+    line-height: 42px; /* Center the text vertically */
+    text-align: center; /* Center the text horizontally */
+    border-radius: 50%; /* Rounded shape */
+    padding: 4px; /* Adjust padding for centering and spacing */
+  }
+
+  /* Style for the button when hovering over it */
+  #backToTopBtn:hover {
+    background-color:#346734; /* Darker background color */
+  }
+  
 .centered-text {
     text-align: center;
 }
