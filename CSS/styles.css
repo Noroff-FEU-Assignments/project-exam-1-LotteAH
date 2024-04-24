@@ -221,8 +221,9 @@ p {
     font-weight: 900;
     font-size: 1.8em; /* Adjust the font size for the symbol */
     position: fixed; /* Fixed position */
-    bottom: 20px; /* 20px from the bottom */
-    right: 30px; /* 30px from the right */
+    bottom: 40px; /* Distance from the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
     z-index: 99; /* Ensure it's above other elements */
     border: none;
     outline: none;
@@ -231,12 +232,11 @@ p {
     cursor: pointer;
     width: 50px; /* Adjust the width for the wider symbol */
     height: 50px; /* Adjust the height accordingly */
-    line-height: 42px; /* Center the text vertically */
+    line-height: 50px; /* Center the text vertically */
     text-align: center; /* Center the text horizontally */
     border-radius: 50%; /* Rounded shape */
-    padding: 4px; /* Adjust padding for centering and spacing */
+    padding: 0; /* Remove padding to keep the circle */
   }
-
   /* Style for the button when hovering over it */
   #backToTopBtn:hover {
     background-color:#346734; /* Darker background color */
