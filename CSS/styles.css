@@ -1003,7 +1003,7 @@ main section {
 nav a {
     display: inline-block;
     padding: 20px 60px;
-    color: white;
+    color: #333333;
     text-decoration: none;
     background-color: transparent;
 }
