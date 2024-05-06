@@ -82,10 +82,9 @@ document.addEventListener("DOMContentLoaded", function () {
         displayPosts();
     });
 
-    // Touch event handling for swipe gestures
     let startX = null;
     let startY = null;
-    let swipeThreshold = 50; // Adjust this threshold as needed
+    let swipeThreshold = 50; 
     let touchStartX = null;
 
     document.querySelector(".carousel-container").addEventListener("touchstart", (e) => {
@@ -103,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const diffY = e.touches[0].clientY - startY;
 
         if (Math.abs(diffX) > Math.abs(diffY)) {
-            e.preventDefault(); // Prevent vertical scrolling
+            e.preventDefault(); 
         }
     });
 

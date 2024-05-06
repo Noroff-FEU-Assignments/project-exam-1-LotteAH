@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function displayBlogPost(post) {
     const blogTitleElement = document.getElementById('blogTitle');
     if (blogTitleElement) {
-      // Update breadcrumb with clickable links and classes
+  
       blogTitleElement.innerHTML = `
         <a href="index.html">Blooms & Bounty |</a>
         <a href="blog.html"> Blog |</a>
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const images = blogSpecificContainer.querySelectorAll('.post-content img');
     images.forEach(image => {
-      // Handle both click and touch events for opening the modal
+      
       image.addEventListener('click', openModal);
     });
 
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function openModal(event) {
-    event.preventDefault(); // Prevent the default behavior of the anchor link
+    event.preventDefault(); 
     const modal = document.getElementById('imageModal');
     if (!modal) {
       console.error("Modal not found");
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Modal image not found");
       return;
     }
-    modalImg.src = this.src; // 'this' refers to the clicked image
+    modalImg.src = this.src; 
     modal.style.display = 'block';
   }
 
