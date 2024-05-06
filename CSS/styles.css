@@ -15,19 +15,19 @@ a {
 html, body {
     font-family: "OpenSans", Verdana, Geneva, Tahoma, sans-serif;
     width: 100%;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure body takes up at least the viewport height */
+    min-height: 100vh;
     margin: 0;
 }
   
 main {
     flex-grow: 1;
-    margin: 20px; /* Take up remaining vertical space */
+    margin: 20px;
 }
 
 .clickable-item {
@@ -42,7 +42,7 @@ main {
 }
 
 .x-container {
-    max-width: 100%; /* Adjusted to 100% */
+    max-width: 100%;
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
@@ -214,42 +214,43 @@ p {
     padding-bottom: 20px;   
 }
 
-/* Style for the back to top button */
 #backToTopBtn {
-    display: none; /* Initially hidden */
+    display: none; 
     font-family: 'Open Sans';
     font-weight: 900;
-    font-size: 1.8em; /* Adjust the font size for the symbol */
-    position: fixed; /* Fixed position */
-    bottom: 20px; /* Distance from the bottom */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Center horizontally */
-    z-index: 99; /* Ensure it's above other elements */
+    font-size: 1.8em;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
     border: none;
     outline: none;
-    background-color: #669966; /* Button background color */
-    color: white; /* Text color */
+    background-color: #669966;
+    color: white;
     cursor: pointer;
-    width: 50px; /* Adjust the width for the wider symbol */
-    height: 50px; /* Adjust the height accordingly */
-    line-height: 50px; /* Center the text vertically */
-    text-align: center; /* Center the text horizontally */
-    border-radius: 50%; /* Rounded shape */
-    padding: 0; /* Remove padding to keep the circle */
-  }
-  /* Style for the button when hovering over it */
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 0;
+}
+
   #backToTopBtn:hover {
-    background-color:#346734; /* Darker background color */
+    background-color:#346734; 
   }
   
 .centered-text {
     text-align: center;
 }
+
 .sucess-image {
     width: 80%;
     border-radius: 50%;
     border: 0.5em solid #A8D48C;
 }
+
 .success-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -274,7 +275,7 @@ p {
 }
 
 .index-container {
-    width: 100%; /* Adjusted to 100% */
+    width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
     display: flex;
@@ -348,7 +349,7 @@ p {
 
 .carousel-content-container:hover .carousel-item {
     transform: scale(1.1);
-  }
+}
   
 .index-about {
   display: flex;
@@ -435,8 +436,8 @@ p {
   }
 
 .blogpost-container:hover {
-    transform: scale(1.05); /* Scale up by 10% */
-  }
+    transform: scale(1.05);
+}
 
 .blog-section .mini-post-container {
     display: flex;
@@ -445,7 +446,7 @@ p {
   
 #modalImage {
     max-width: 100%;
-    max-height: calc(100vh - 240px); /* Adjusted height for modal content */
+    max-height: calc(100vh - 240px);
     height: auto;
     display: block;
     margin: 0 auto;
@@ -456,12 +457,12 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: auto; /* Adjusted to auto to fit the image size */
-    max-width: calc(100% - 40px); /* Adjusted max-width for modal content */
+    width: auto; 
+    max-width: calc(100% - 40px); 
     padding: 20px;
     background-color: #fff;
     text-align: center;
-    overflow-y: auto; /* Allow vertical scrolling within modal */
+    overflow-y: auto; 
 }
 
 #imageModal {
@@ -477,14 +478,14 @@ p {
 }
   
 .post-title {
-    font-weight: normal; /* Remove bold styling */
-    font-family: 'Open Sans', sans-serif; /* Specify the font family */
-    font-stretch: condensed; /* Make the font narrower */
-    font-weight: 100; /* Set a lighter font weight for thinner appearance */
-    color: #333333; /* Set the color to gray */
-    text-decoration: none; /* Remove underline */
-    transition: font-weight 0.2s; /* Add transition for smooth hover effect */
-  }
+    font-weight: normal; 
+    font-family: 'Open Sans', sans-serif;
+    font-stretch: condensed;
+    font-weight: 100; 
+    color: #333333; 
+    text-decoration: none;
+    transition: font-weight 0.2s; 
+}
 
 .blog-title {
     font-size: 1.2em; 
@@ -494,18 +495,20 @@ p {
     margin-bottom: 40px;
     text-transform: none;
 } 
+
 .breadcrumb a {
-    font-family: 'Open Sans', sans-serif; /* Specify the font family */
-    font-stretch: condensed; /* Make the font narrower */
-    font-weight: 100; /* Set a lighter font weight for thinner appearance */
-    color: #333333; /* Set the color to gray */
-    text-decoration: none; /* Remove underline */
-    transition: font-weight 0.2s; /* Add transition for smooth hover effect */
-  }
+    font-family: 'Open Sans', sans-serif;
+    font-stretch: condensed; 
+    font-weight: 100; 
+    color: #333333;
+    text-decoration: none; 
+    transition: font-weight 0.2s;
+}
 
 .breadcrumb a:hover {
-    font-weight: bold; /* Set font weight to bold on hover */
+    font-weight: bold;
 }
+
 .image-container {
     display: flex;
     flex-wrap: wrap;
@@ -854,9 +857,9 @@ figcaption {
 @media (max-width: 768px) {
     .modal {
         display: block;
-      }
+    }
     
-      .modal-content {
+    .modal-content {
         position: fixed;
         top: 50%;
         left: 50%;
@@ -867,7 +870,7 @@ figcaption {
         background-color: #fff;
         text-align: center;
         overflow-y: auto; /* Allow vertical scrolling within modal */
-      }
+    }
     
     .arrow-left img,
     .arrow-right img {
@@ -879,25 +882,25 @@ figcaption {
 
 
 @media (max-width: 899px) {
-    .carousel-content-container {
+.carousel-content-container {
         display: none;
-    }
+}
 
-    .carousel-content-container:nth-child(-n+2) {
+.carousel-content-container:nth-child(-n+2) {
         display: block;
         padding: 0;
         margin: 0;
-    }
+}
 
-    .carousel {
+.carousel {
         padding: 0px;
-    }
+}
 
-    .x-container {
+.x-container {
         margin: 0; /* Update to remove margin on smaller devices */
-    }
+}
 
-    .index-container {
+.index-container {
         width: 100%; /* Adjusted to 100% */
         margin: 0;
         padding: 20px;
@@ -905,15 +908,14 @@ figcaption {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
+}
 
-    .carousel-content-container:hover .carousel-item {
+.carousel-content-container:hover .carousel-item {
         transform: none; /* Remove the transform effect on hover */
-    }
+}
 }
   
 @media (min-width: 900px) {
-
 .x-container {
     margin: 0 auto;
     padding: 20px;
@@ -925,7 +927,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: space-between; 
-  }
+}
 
 .blog-title {
     text-align: center; 
@@ -983,7 +985,7 @@ main section {
     margin-left: 60px;
 }
 
-  nav {
+nav {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1028,6 +1030,7 @@ main {
 .index-about-content {
 width: 80%;
 }
+
 .about_img_2 {
     display: flex;
     align-content: center;
@@ -1086,8 +1089,6 @@ input[type="email"] {
     justify-content: right;
     padding-top: 65px;
 }
-
-
 }
 
 @media screen and (min-width: 1000px) {
@@ -1099,26 +1100,26 @@ input[type="email"] {
 
 
 @media (min-width: 900px) and (max-width: 1299px) {
-    /* Hide all carousel content containers */
-    .carousel-content-container {
-        display: none;
-    }
 
-    /* Show the first three carousel content containers */
-    .carousel-content-container:nth-child(-n+3) {
-        display: flex;
-        padding: 0;
-        margin: 0;
-    }
+.carousel-content-container {
+    display: none;
+}
 
-    .carousel {
-        padding: 0px;
-    }
+    
+.carousel-content-container:nth-child(-n+3) {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.carousel {
+    padding: 0px;
+}
 }
   
   
 @media (min-width: 1300px) {
-    .index-about-content {
+.index-about-content {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -1136,6 +1137,7 @@ input[type="email"] {
     max-width: 60%;
     height: auto;
 }       
+
 .index-about-image {
     max-width: 80%;
     height: auto;
@@ -1148,8 +1150,7 @@ input[type="email"] {
 
 .carousel-content-container {
     display: flex;
-    /* Flexbox properties can be added here */
-    flex-wrap: wrap; /* Example flexbox property */
-  }
+    flex-wrap: wrap; 
+}
 }
 
