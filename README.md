@@ -23,7 +23,7 @@ Featuers:
 1. Clone the repo:
 
 ```bash
-git clone git@github.com:NoroffFEU/portfolio-1-example.git
+git clone https://github.com/Noroff-FEU-Assignments/project-exam-1-LotteAH.git
 ```
 
 ### Running
